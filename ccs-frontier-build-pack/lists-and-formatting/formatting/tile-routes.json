@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 104,
+  "width": 380,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "a",
+    "attributes": {
+      "href": "[$Link]",
+      "target": "_self"
+    },
+    "style": {
+      "display": "flex",
+      "align-items": "flex-start",
+      "box-sizing": "border-box",
+      "width": "100%",
+      "height": "100%",
+      "padding": "16px",
+      "background-color": "#FFFFFF",
+      "border": "1px solid #E1DFDD",
+      "border-radius": "4px",
+      "text-decoration": "none",
+      "overflow": "hidden"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "flex": "0 0 40px",
+          "width": "40px",
+          "height": "40px",
+          "border-radius": "4px",
+          "background-color": "#4F2391",
+          "display": "flex",
+          "align-items": "center",
+          "justify-content": "center",
+          "margin-right": "14px"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "attributes": {
+              "iconName": "[$Icon]"
+            },
+            "style": {
+              "color": "#FFFFFF",
+              "font-size": "20px"
+            }
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "flex-direction": "column",
+          "min-width": "0"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "[$Title]",
+            "style": {
+              "font-size": "15px",
+              "font-weight": "600",
+              "color": "#252423",
+              "line-height": "1.3"
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$Description]",
+            "style": {
+              "font-size": "13px",
+              "color": "#605E5C",
+              "line-height": "1.45",
+              "margin-top": "2px",
+              "white-space": "normal"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
