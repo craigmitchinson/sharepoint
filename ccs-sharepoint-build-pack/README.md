@@ -14,6 +14,7 @@ All solution names, teams, people, quotes and figures in the designs and seed da
 
 | Folder or file | What it holds |
 |---|---|
+| `00-site-register.md` | Title, address and description for every site |
 | `01-build-guide.md` | The order of work, from decisions and admin requests to launch checks |
 | `02-access-and-permissions.md` | Groups, site and list permissions, Power BI and agent access, copy-paste admin requests, fixes for common access problems |
 | `03-sites-urls-and-folders.md` | How the sites join up, every site and page address, every list and library, folder structures, naming |
