@@ -2,6 +2,8 @@
 
 Frontier is the CCS innovation forum: colleagues bring a problem, Frontier looks at it without a technology in mind, checks what CCS already runs, and tests the way most likely to improve the service, the speed or the risk, with evidence. What proves out is handed to a Lab through the CCS front door.
 
+No admin rights? Follow `01a-build-without-admin.md` for the site, theme (Purple), navigation and lists, then come back here for the pages and Power BI.
+
 Open `index.html` first. It links every page, asset, chart and placeholder in this pack. Build in the order below.
 
 ## 1. The sites
