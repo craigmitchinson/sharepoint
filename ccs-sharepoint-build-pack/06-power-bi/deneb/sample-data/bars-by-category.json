@@ -1,0 +1,22 @@
+[
+ {
+  "Category": "Insurance",
+  "Amount": 512,
+  "Label": "512k"
+ },
+ {
+  "Category": "Pensions",
+  "Amount": 389,
+  "Label": "389k"
+ },
+ {
+  "Category": "Investments",
+  "Amount": 254,
+  "Label": "254k"
+ },
+ {
+  "Category": "Shared services",
+  "Amount": 87,
+  "Label": "87k"
+ }
+]

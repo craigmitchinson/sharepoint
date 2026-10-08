@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 150,
+  "width": 380,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "flex-direction": "column",
+      "width": "100%",
+      "height": "100%",
+      "box-sizing": "border-box",
+      "background-color": "#FFFFFF",
+      "border": "1px solid #EDEBE9",
+      "border-radius": "6px",
+      "overflow": "hidden",
+      "padding": "14px 16px",
+      "gap": "6px"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "justify-content": "space-between",
+          "gap": "8px",
+          "align-items": "center"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "[$HandedTo]",
+            "style": {
+              "font-size": "12px",
+              "font-weight": "600",
+              "color": "#4F2391"
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$Stage]",
+            "style": {
+              "display": "=if([$Stage] == '', 'none', 'inline-block')",
+              "white-space": "nowrap",
+              "padding": "2px 8px",
+              "border-radius": "2px",
+              "font-size": "12px",
+              "font-weight": "600",
+              "line-height": "18px",
+              "background-color": "#E3F1DF",
+              "color": "#39682E"
+            }
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Title]",
+        "style": {
+          "font-size": "15px",
+          "font-weight": "600",
+          "color": "#252423"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Result]",
+        "style": {
+          "font-size": "13px",
+          "line-height": "1.45",
+          "color": "#323130"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "='Now: ' + [$NowStatus]",
+        "style": {
+          "font-size": "12px",
+          "color": "#605E5C",
+          "margin-top": "auto"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Columns by period against a dashed target line, value label on each column, the latest period in the darker shade (e.g. share of drafts accepted by week, target 80%). Fields: Period, Value (0 to 1), PeriodOrder, IsLatest (true/false), Target (0 to 1, same on every row).",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Summaries accepted with small edits",
+    "subtitle": "Share of drafts, by week · target 80%"
+  },
+  "width": "container",
+  "height": "container",
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": {
+          "band": 0.2
+        },
+        "cornerRadiusTopLeft": 4,
+        "cornerRadiusTopRight": 4
+      },
+      "encoding": {
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": null,
+          "title": null
+        },
+        "color": {
+          "condition": {
+            "test": "datum.IsLatest == true || datum.IsLatest == 'true'",
+            "value": "#A11030"
+          },
+          "value": "#CE143D"
+        },
+        "tooltip": [
+          {
+            "field": "Period"
+          },
+          {
+            "field": "Value",
+            "format": ".0%"
+          }
+        ],
+        "x": {
+          "field": "Period",
+          "type": "ordinal",
+          "sort": {
+            "field": "PeriodOrder"
+          },
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12,
+            "labelColor": "#605E5C",
+            "domainColor": "#C8C6C4",
+            "ticks": false
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#15223E"
+      },
+      "encoding": {
+        "y": {
+          "field": "Value",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Value",
+          "format": ".0%"
+        },
+        "x": {
+          "field": "Period",
+          "type": "ordinal",
+          "sort": {
+            "field": "PeriodOrder"
+          },
+          "title": null,
+          "axis": {
+            "labelAngle": 0,
+            "labelFontSize": 12,
+            "labelColor": "#605E5C",
+            "domainColor": "#C8C6C4",
+            "ticks": false
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          4,
+          4
+        ],
+        "color": "#605E5C",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "aggregate": "max",
+          "field": "Target",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dy": -6,
+        "fontSize": 11,
+        "color": "#605E5C",
+        "x": {
+          "expr": "width"
+        }
+      },
+      "encoding": {
+        "y": {
+          "aggregate": "max",
+          "field": "Target",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "Target"
+        }
+      }
+    }
+  ]
+}

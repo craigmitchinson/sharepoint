@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "inline-flex",
+    "align-items": "center",
+    "justify-content": "center",
+    "min-width": "32px",
+    "height": "24px",
+    "padding": "0 6px",
+    "background-color": "#15223E",
+    "color": "#FFFFFF",
+    "font-weight": "600",
+    "font-size": "12px",
+    "border-radius": "2px"
+  },
+  "txtContent": "@currentField"
+}

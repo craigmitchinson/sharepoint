@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 150,
+  "width": 372,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "flex-direction": "column",
+      "width": "100%",
+      "height": "100%",
+      "box-sizing": "border-box",
+      "padding": "18px",
+      "background-color": "#15223E",
+      "border": "1px solid #243B6B",
+      "border-radius": "4px",
+      "box-shadow": "none",
+      "overflow": "hidden",
+      "cursor": "default"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "align-items": "center"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "style": {
+              "width": "9px",
+              "height": "9px",
+              "border-radius": "50%",
+              "margin-right": "8px",
+              "background-color": "=if([$State] == 'Working', '#E2728B', if([$State] == 'Building', '#DFB866', if([$State] == 'Assessing', '#7C89A6', '#7C89A6')))"
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$State]",
+            "style": {
+              "font-size": "12px",
+              "font-weight": "600",
+              "color": "=if([$State] == 'Working', '#E2728B', if([$State] == 'Building', '#DFB866', if([$State] == 'Assessing', '#7C89A6', '#7C89A6')))"
+            }
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Title]",
+        "style": {
+          "font-size": "16px",
+          "font-weight": "600",
+          "color": "#FFFFFF",
+          "margin-top": "8px"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Description]",
+        "style": {
+          "font-size": "13px",
+          "color": "#ACB5C7",
+          "line-height": "1.5",
+          "margin-top": "6px"
+        }
+      }
+    ]
+  }
+}

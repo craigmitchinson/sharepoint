@@ -1,0 +1,1074 @@
+{
+ "Capabilities": [
+  {
+   "Title": "Take the routine work off your teams",
+   "Description": "Blue Prism digital workers run high-volume, rule-based steps around the clock, across the systems your teams already use.",
+   "Example": "rekeying transfer data between three systems.",
+   "Featured": true,
+   "SortOrder": 1
+  },
+  {
+   "Title": "Apps and workflows for your teams",
+   "Description": "Power Apps and Power Automate replace spreadsheets, email chains and manual hand-offs.",
+   "Example": "referral trackers and approval workflows.",
+   "Featured": true,
+   "SortOrder": 2
+  },
+  {
+   "Title": "Prepare the case, so people decide faster",
+   "Description": "Coming next. Agents on Google Cloud will gather the facts and check them against our own data, so your colleague decides with everything in front of them.",
+   "Example": "drafting the case summary for a complaint handler.",
+   "Featured": true,
+   "SortOrder": 3
+  },
+  {
+   "Title": "Reusable services",
+   "Description": "We are building business rules as services on Google Cloud, so every platform uses the same logic and a change happens in one place.",
+   "Example": "eligibility rules shared by a digital worker, an app and an agent.",
+   "Featured": false,
+   "SortOrder": 4
+  },
+  {
+   "Title": "Keep what's live running",
+   "Description": "Our Service Team monitors, fixes and changes everything we build for as long as it runs.",
+   "Example": "updating a digital worker when a system screen changes.",
+   "Featured": false,
+   "SortOrder": 5
+  },
+  {
+   "Title": "Telemetry and journey insight",
+   "Description": "Telemetry from our automations shows how the journeys they support are performing, so we can see where work slows down and improve it.",
+   "Example": "measuring how long transfer requests wait between steps.",
+   "Featured": false,
+   "SortOrder": 6
+  }
+ ],
+ "Skills": [
+  {
+   "Title": "Digital Worker engineering",
+   "Headcount": "15",
+   "Description": "Build and run Blue Prism digital workers, the backbone of our estate.",
+   "SortOrder": 1
+  },
+  {
+   "Title": "AI engineering",
+   "Headcount": "9",
+   "Description": "Agents, workflows and services on Google Cloud, built to prepare decisions, not make them.",
+   "SortOrder": 2
+  },
+  {
+   "Title": "Power Platform",
+   "Headcount": "6",
+   "Description": "Colleague-facing apps and lighter automation with Power Apps, Power Automate and Dataverse.",
+   "SortOrder": 3
+  },
+  {
+   "Title": "Solution architecture",
+   "Headcount": "2",
+   "Description": "Make sure every automation fits your systems, our controls and group standards before build starts.",
+   "SortOrder": 4
+  },
+  {
+   "Title": "Customer journey design",
+   "Headcount": "2",
+   "Description": "Map the journey end to end, so we automate the right step, not the most visible one.",
+   "SortOrder": 5
+  },
+  {
+   "Title": "Integration and observability",
+   "Headcount": "3",
+   "Description": "Connect automations to the systems around them and build the telemetry that shows how they perform.",
+   "SortOrder": 6
+  }
+ ],
+ "Stories": [
+  {
+   "Title": "Claims triage",
+   "BusinessArea": "Insurance",
+   "Before": "14 min",
+   "After": "2 min",
+   "Quote": "My handlers start the day on decisions, not on sorting. We got back the equivalent of eight people without hiring anyone."
+  },
+  {
+   "Title": "Pension transfer checks",
+   "BusinessArea": "Pensions",
+   "Before": "3 systems",
+   "After": "1 check",
+   "Quote": "Transfers used to bounce between three teams. Now one check catches the missing documents before anything moves."
+  },
+  {
+   "Title": "Investment KYC refresh",
+   "BusinessArea": "Investments",
+   "Before": "12 days",
+   "After": "2 days",
+   "Quote": "Refreshes run overnight, so customers are not chased twice and we are never behind on the regulator's timetable."
+  }
+ ],
+ "Quotes": [
+  {
+   "Title": "[Name]",
+   "Role": "AI engineer, Squad 2",
+   "Quote": "I built the agent that drafts complaint case summaries. Handlers check and decide; they no longer spend the first hour gathering facts."
+  },
+  {
+   "Title": "[Name]",
+   "Role": "Digital Worker developer, Service Team",
+   "Quote": "When the claims system changed its screens, we updated the digital worker overnight. Nobody in Insurance noticed, which is the point."
+  },
+  {
+   "Title": "[Name]",
+   "Role": "Power Platform developer, Squad 3",
+   "Quote": "The referral tracker replaced four spreadsheets and an inbox. Team leaders now see every open referral on one screen."
+  }
+ ],
+ "Platforms": [
+  {
+   "Title": "Blue Prism",
+   "Description": "Digital workers. The bulk of our estate, with seven years of operating discipline behind it.",
+   "Status": "Live"
+  },
+  {
+   "Title": "Power Platform",
+   "Description": "Power Apps, Power Automate, Dataverse and Copilot Studio.",
+   "Status": "Live"
+  },
+  {
+   "Title": "Google Cloud",
+   "Description": "Where we will build agents, workflows and reusable services.",
+   "Status": "Next"
+  },
+  {
+   "Title": "WorkHQ",
+   "Description": "The next generation of Blue Prism. Our services are built so the move is a redeploy, not a rebuild.",
+   "Status": "Next"
+  },
+  {
+   "Title": "Dynatrace",
+   "Description": "Monitoring and telemetry for our automations.",
+   "Status": "Live"
+  },
+  {
+   "Title": "Power BI and Fabric",
+   "Description": "The estate data behind every number on this site.",
+   "Status": "Live"
+  }
+ ],
+ "Solutions": [
+  {
+   "Title": "Claims triage",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Insurance",
+   "Squad": "Squad 2",
+   "Status": "Live"
+  },
+  {
+   "Title": "Policy amendments",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Insurance",
+   "Squad": "Service",
+   "Status": "Live"
+  },
+  {
+   "Title": "Death claim notifications",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Insurance",
+   "Squad": "Service",
+   "Status": "Live"
+  },
+  {
+   "Title": "Transfer checks",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Pensions",
+   "Squad": "Service",
+   "Status": "Live"
+  },
+  {
+   "Title": "Referral tracker",
+   "SolutionType": "App",
+   "BusinessArea": "Pensions",
+   "Squad": "Squad 3",
+   "Status": "Live"
+  },
+  {
+   "Title": "Retirement quotes",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Pensions",
+   "Squad": "Service",
+   "Status": "Live"
+  },
+  {
+   "Title": "KYC refresh",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Investments",
+   "Squad": "Service",
+   "Status": "Live"
+  },
+  {
+   "Title": "Fund switches",
+   "SolutionType": "Digital worker",
+   "BusinessArea": "Investments",
+   "Squad": "Service",
+   "Status": "Live"
+  },
+  {
+   "Title": "Valuation statements",
+   "SolutionType": "Service",
+   "BusinessArea": "Investments",
+   "Squad": "Squad 4",
+   "Status": "Live"
+  },
+  {
+   "Title": "This site",
+   "SolutionType": "Site",
+   "BusinessArea": "Shared services",
+   "Squad": "Service",
+   "Status": "Live"
+  }
+ ],
+ "Requests": [
+  {
+   "Title": "Claims bot skipped cases with a missing policy number",
+   "ContentType": "Problem",
+   "IAStatus": "In progress"
+  },
+  {
+   "Title": "Run the KYC refresh overnight instead of 9am",
+   "ContentType": "Change",
+   "IAStatus": "With us"
+  },
+  {
+   "Title": "Death claim notifications",
+   "ContentType": "New idea",
+   "IAStatus": "New"
+  }
+ ],
+ "Portfolio": [
+  {
+   "Title": "Claims triage agent",
+   "BusinessArea": "Insurance",
+   "Squad": "Squad 2",
+   "Shape": "Demoable",
+   "Size": "S",
+   "Gate": "Ready to test"
+  },
+  {
+   "Title": "Pension transfer checks",
+   "BusinessArea": "Pensions",
+   "Squad": "Squad 1",
+   "Shape": "Incremental",
+   "Size": "M",
+   "Gate": "Ready to build"
+  },
+  {
+   "Title": "Clicks-to-code: first ten services",
+   "BusinessArea": "Whole estate",
+   "Squad": "Squad 4",
+   "Shape": "Long-build",
+   "Size": "L",
+   "Gate": "Ready to build"
+  },
+  {
+   "Title": "Complaint case preparation",
+   "BusinessArea": "Insurance",
+   "Squad": "Squad 2",
+   "Shape": "Demoable",
+   "Size": "S",
+   "Gate": "Viable"
+  },
+  {
+   "Title": "Referral tracker app",
+   "BusinessArea": "Pensions",
+   "Squad": "Squad 3",
+   "Shape": "Incremental",
+   "Size": "M",
+   "Gate": "Ready to release"
+  },
+  {
+   "Title": "Weekly delivery summary agent",
+   "BusinessArea": "Internal",
+   "Squad": "Squad 2",
+   "Shape": "Demoable",
+   "Size": "XS",
+   "Gate": "Qualified"
+  }
+ ],
+ "LabInvestigations": [
+  {
+   "Title": "BPPI task mining",
+   "Stage": "1 Sense",
+   "State": "Working"
+  },
+  {
+   "Title": "Skan AI",
+   "Stage": "1 Sense",
+   "State": "Assessing"
+  },
+  {
+   "Title": "Process map agent",
+   "Stage": "1 Sense",
+   "State": "Building"
+  },
+  {
+   "Title": "Journey telemetry",
+   "Stage": "2 Understand",
+   "State": "Building"
+  },
+  {
+   "Title": "Estate knowledge graph",
+   "Stage": "2 Understand",
+   "State": "Assessing"
+  },
+  {
+   "Title": "Models over the estate",
+   "Stage": "2 Understand",
+   "State": "Assessing"
+  },
+  {
+   "Title": "Clicks to code",
+   "Stage": "3 Act",
+   "State": "Building"
+  },
+  {
+   "Title": "Capability agents",
+   "Stage": "3 Act",
+   "State": "Assessing"
+  },
+  {
+   "Title": "Decision-grounding agents",
+   "Stage": "3 Act",
+   "State": "Assessing"
+  },
+  {
+   "Title": "Shadow replay on Kafka",
+   "Stage": "4 Prove",
+   "State": "Assessing"
+  },
+  {
+   "Title": "Estate dashboard",
+   "Stage": "4 Prove",
+   "State": "Building"
+  },
+  {
+   "Title": "Decision records",
+   "Stage": "4 Prove",
+   "State": "Assessing"
+  }
+ ],
+ "ToilLedger": [
+  {
+   "Title": "Manual queue restarts after overnight failures",
+   "HoursPerMonth": 42,
+   "Effort": "S",
+   "Rank": 1,
+   "Status": "In build"
+  },
+  {
+   "Title": "Certificate renewals on runtime machines",
+   "HoursPerMonth": 18,
+   "Effort": "XS",
+   "Rank": 2,
+   "Status": "Next"
+  },
+  {
+   "Title": "Reworking cases with missing data",
+   "HoursPerMonth": 26,
+   "Effort": "M",
+   "Rank": 3,
+   "Status": "Next"
+  },
+  {
+   "Title": "Credential rotation",
+   "HoursPerMonth": 9,
+   "Effort": "S",
+   "Rank": 4,
+   "Status": "Not started"
+  },
+  {
+   "Title": "Weekly health report assembly",
+   "HoursPerMonth": 6,
+   "Effort": "XS",
+   "Rank": 5,
+   "Status": "Done"
+  }
+ ],
+ "Learning": [
+  {
+   "Title": "Copilot Studio agent design",
+   "Towards": "Competent",
+   "Open": true
+  },
+  {
+   "Title": "Python services and testing",
+   "Towards": "Competent",
+   "Open": true
+  },
+  {
+   "Title": "Dynatrace tracing",
+   "Towards": "Proficient",
+   "Open": true
+  },
+  {
+   "Title": "Google Cloud agent development",
+   "Towards": "Competent",
+   "Open": true
+  },
+  {
+   "Title": "Process analysis with BPPI",
+   "Towards": "Proficient",
+   "Open": true
+  }
+ ],
+ "CapabilityGaps": [
+  {
+   "Title": "Python services",
+   "BelowCompetent": "6",
+   "Plan": "Pairing on clicks-to-code services"
+  },
+  {
+   "Title": "Google Cloud services",
+   "BelowCompetent": "7",
+   "Plan": "Squad 2 rotation"
+  },
+  {
+   "Title": "Observability",
+   "BelowCompetent": "5",
+   "Plan": "Dynatrace course, Q4"
+  },
+  {
+   "Title": "Agents and workflows",
+   "BelowCompetent": "8",
+   "Plan": "Lab shadowing"
+  }
+ ],
+ "Labs": [
+  {
+   "Title": "24x7 Services",
+   "Description": "Keeps colleague and customer services running around the clock: monitoring, incidents, resilience.",
+   "LabMark": "/sites/ccs/BrandAssets/logos/lab-mark-24x7-services_300x300.png",
+   "LabSite": "/sites/ccs-247",
+   "TeamsCount": 4,
+   "People": 61,
+   "SortOrder": 1
+  },
+  {
+   "Title": "Automated Operations",
+   "Description": "Digital workers, apps and agents that take routine work off colleagues.",
+   "LabMark": "/sites/ccs/BrandAssets/logos/lab-mark-automated-operations_300x300.png",
+   "LabSite": "/sites/ccs-autoops",
+   "TeamsCount": 3,
+   "People": 56,
+   "SortOrder": 2
+  },
+  {
+   "Title": "Colleague Tooling",
+   "Description": "The tools colleagues use every day: desktops, case tools, knowledge.",
+   "LabMark": "/sites/ccs/BrandAssets/logos/lab-mark-colleague-tooling_300x300.png",
+   "LabSite": "/sites/ccs-tooling",
+   "TeamsCount": 3,
+   "People": 44,
+   "SortOrder": 3
+  },
+  {
+   "Title": "Data & Insights",
+   "Description": "One trusted set of numbers behind every decision on the platform.",
+   "LabMark": "/sites/ccs/BrandAssets/logos/lab-mark-data-and-insights_300x300.png",
+   "LabSite": "/sites/ccs-insights",
+   "TeamsCount": 2,
+   "People": 29,
+   "SortOrder": 4
+  }
+ ],
+ "Teams": [
+  {
+   "Title": "Monitoring",
+   "Lab": "24x7 Services",
+   "Description": "Watches every service and automation, and raises the alarm.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--24x7-services--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-247-monitoring",
+   "SortOrder": 1
+  },
+  {
+   "Title": "Incident Response",
+   "Lab": "24x7 Services",
+   "Description": "On call around the clock for anything stopping work.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--24x7-services--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-247-incidents",
+   "SortOrder": 2
+  },
+  {
+   "Title": "Resilience",
+   "Lab": "24x7 Services",
+   "Description": "Recovery plans and testing for critical services.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--24x7-services--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-247-resilience",
+   "SortOrder": 3
+  },
+  {
+   "Title": "Release Management",
+   "Lab": "24x7 Services",
+   "Description": "Safe changes into production.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--24x7-services--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-247-releases",
+   "SortOrder": 4
+  },
+  {
+   "Title": "Automated Services",
+   "Lab": "Automated Operations",
+   "Description": "Digital workers and Power Platform; next, services on Google Cloud.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--automated-operations--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-autoops-services",
+   "SortOrder": 1
+  },
+  {
+   "Title": "Agent Engineering",
+   "Lab": "Automated Operations",
+   "Description": "Builds and shadow-tests the Lab's agents.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--automated-operations--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-autoops-agents",
+   "SortOrder": 2
+  },
+  {
+   "Title": "Process Intelligence",
+   "Lab": "Automated Operations",
+   "Description": "Finds the next work worth automating.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--automated-operations--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-autoops-intelligence",
+   "SortOrder": 3
+  },
+  {
+   "Title": "Case Tools",
+   "Lab": "Colleague Tooling",
+   "Description": "The case and claims workspaces colleagues work in.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--colleague-tooling--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-tooling-case",
+   "SortOrder": 1
+  },
+  {
+   "Title": "Knowledge",
+   "Lab": "Colleague Tooling",
+   "Description": "Answers and guidance at the point of need.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--colleague-tooling--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-tooling-knowledge",
+   "SortOrder": 2
+  },
+  {
+   "Title": "Desktop",
+   "Lab": "Colleague Tooling",
+   "Description": "The colleague desktop and its integrations.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--colleague-tooling--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-tooling-desktop",
+   "SortOrder": 3
+  },
+  {
+   "Title": "Reporting",
+   "Lab": "Data & Insights",
+   "Description": "The CCS estate model and every dashboard.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--data-and-insights--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-insights-reporting",
+   "SortOrder": 1
+  },
+  {
+   "Title": "Data Engineering",
+   "Lab": "Data & Insights",
+   "Description": "The pipelines that feed it.",
+   "TeamMark": "/sites/ccs/BrandAssets/marks/full/ccs-mark--data-and-insights--for-light_64x64.png",
+   "TeamSite": "/sites/ccs-insights-engineering",
+   "SortOrder": 2
+  }
+ ],
+ "Tools": [
+  {
+   "Title": "Blue Prism",
+   "Vendor": "SS&C Blue Prism",
+   "Purpose": "Digital workers for high-volume, rule-based steps",
+   "UsedBy": [
+    "Automated Operations"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Technology Platform Lead"
+  },
+  {
+   "Title": "WorkHQ",
+   "Vendor": "SS&C Blue Prism",
+   "Purpose": "The next generation of Blue Prism",
+   "UsedBy": [
+    "Automated Operations"
+   ],
+   "ToolStatus": "Next",
+   "LicenceOwner": "Technology Platform Lead"
+  },
+  {
+   "Title": "Blue Prism Process Intelligence",
+   "Vendor": "SS&C Blue Prism",
+   "Purpose": "Task and process mining",
+   "UsedBy": [
+    "Automated Operations"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, Automated Operations"
+  },
+  {
+   "Title": "Power Platform",
+   "Vendor": "Microsoft",
+   "Purpose": "Apps, workflows and Copilot Studio",
+   "UsedBy": [
+    "Automated Operations",
+    "Colleague Tooling"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Technology Platform Lead"
+  },
+  {
+   "Title": "Copilot Studio",
+   "Vendor": "Microsoft",
+   "Purpose": "The CCS agent and Lab agents",
+   "UsedBy": [
+    "Automated Operations"
+   ],
+   "ToolStatus": "Pilot",
+   "LicenceOwner": "Business Platform Lead"
+  },
+  {
+   "Title": "Google Cloud",
+   "Vendor": "Google",
+   "Purpose": "Agents, workflows and reusable services",
+   "UsedBy": [
+    "Automated Operations",
+    "Data & Insights"
+   ],
+   "ToolStatus": "Pilot",
+   "LicenceOwner": "Technology Platform Lead"
+  },
+  {
+   "Title": "Pega",
+   "Vendor": "Pegasystems",
+   "Purpose": "Case and claims workspaces",
+   "UsedBy": [
+    "Colleague Tooling"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, Colleague Tooling"
+  },
+  {
+   "Title": "ServiceNow",
+   "Vendor": "ServiceNow",
+   "Purpose": "Incidents, knowledge and service requests",
+   "UsedBy": [
+    "24x7 Services",
+    "Colleague Tooling"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, 24x7 Services"
+  },
+  {
+   "Title": "Dynatrace",
+   "Vendor": "Dynatrace",
+   "Purpose": "Monitoring and telemetry",
+   "UsedBy": [
+    "24x7 Services",
+    "Automated Operations"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, 24x7 Services"
+  },
+  {
+   "Title": "Splunk",
+   "Vendor": "Cisco",
+   "Purpose": "Log search and alerting",
+   "UsedBy": [
+    "24x7 Services"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, 24x7 Services"
+  },
+  {
+   "Title": "Azure DevOps",
+   "Vendor": "Microsoft",
+   "Purpose": "Code, pipelines and releases",
+   "UsedBy": [
+    "24x7 Services",
+    "Automated Operations",
+    "Colleague Tooling",
+    "Data & Insights"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Technology Platform Lead"
+  },
+  {
+   "Title": "Power BI and Fabric",
+   "Vendor": "Microsoft",
+   "Purpose": "The CCS estate model and every dashboard",
+   "UsedBy": [
+    "Data & Insights"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, Data & Insights"
+  },
+  {
+   "Title": "Deneb",
+   "Vendor": "Open source, certified visual",
+   "Purpose": "The charts in every CCS report",
+   "UsedBy": [
+    "Data & Insights"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Lab Engineering Lead, Data & Insights"
+  },
+  {
+   "Title": "Microsoft 365",
+   "Vendor": "Microsoft",
+   "Purpose": "SharePoint, Teams and these sites",
+   "UsedBy": [
+    "24x7 Services",
+    "Automated Operations",
+    "Colleague Tooling",
+    "Data & Insights"
+   ],
+   "ToolStatus": "Live",
+   "LicenceOwner": "Business Platform Lead"
+  }
+ ],
+ "Ideas": [
+  {
+   "Title": "Letters customers can read first time",
+   "Theme": "Customer letters",
+   "IdeaStatus": "Chosen",
+   "BusinessArea": "Pensions",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Know why a customer is calling before we answer",
+   "Theme": "Customer contact",
+   "IdeaStatus": "Shortlisted",
+   "BusinessArea": "Insurance",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Draft the file note from the call",
+   "Theme": "Colleague time",
+   "IdeaStatus": "Shortlisted",
+   "BusinessArea": "Investments",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Check a pension pack is complete on arrival",
+   "Theme": "Process",
+   "IdeaStatus": "New",
+   "BusinessArea": "Pensions",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Show handlers which cases are about to breach",
+   "Theme": "Colleague time",
+   "IdeaStatus": "New",
+   "BusinessArea": "Insurance",
+   "Outcome": "Lower risk"
+  },
+  {
+   "Title": "A single view of what a customer has asked us",
+   "Theme": "Customer contact",
+   "IdeaStatus": "Parked",
+   "BusinessArea": "Shared services",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Translate letters into Welsh automatically",
+   "Theme": "Customer letters",
+   "IdeaStatus": "New",
+   "BusinessArea": "Pensions",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Practise difficult calls with a simulated customer",
+   "Theme": "Learning",
+   "IdeaStatus": "Shortlisted",
+   "BusinessArea": "Insurance",
+   "Outcome": "Better service"
+  }
+ ],
+ "Experiments": [
+  {
+   "Title": "Letters customers can read",
+   "Stage": "Explore",
+   "Technology": "Language model",
+   "SponsorArea": "Pensions Operations",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Spot a struggling customer sooner",
+   "Stage": "Explore",
+   "Technology": "Speech analytics",
+   "SponsorArea": "Customer Care",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Test data that looks real",
+   "Stage": "Explore",
+   "Technology": "Synthetic data",
+   "SponsorArea": "Automated Services",
+   "Outcome": "Lower risk"
+  },
+  {
+   "Title": "Voice notes to case summaries",
+   "Stage": "Test",
+   "Technology": "Speech to text, Language model",
+   "SponsorArea": "Claims, Insurance",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Read handwritten claim forms",
+   "Stage": "Test",
+   "Technology": "Vision model",
+   "SponsorArea": "Claims, Insurance",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Map a process from a Teams call",
+   "Stage": "Test",
+   "Technology": "Copilot Studio",
+   "SponsorArea": "Process Intelligence",
+   "Outcome": "Evidence"
+  },
+  {
+   "Title": "Answer policy questions in chat",
+   "Stage": "Test",
+   "Technology": "Agent, Knowledge",
+   "SponsorArea": "Customer Care",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Predict tomorrow’s workload",
+   "Stage": "Decide",
+   "Technology": "Forecasting",
+   "SponsorArea": "Workforce Planning",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "One sign-in for every tool",
+   "Stage": "Decide",
+   "Technology": "Identity",
+   "SponsorArea": "Colleague Tooling",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Complaint preparation agent",
+   "Stage": "Handed over",
+   "Technology": "Agent",
+   "HandedTo": "Automated Operations",
+   "Outcome": "Lower risk",
+   "Result": "Handlers start every complaint with the facts gathered and checked.",
+   "NowStatus": "In shadow testing"
+  },
+  {
+   "Title": "Knowledge search that answers",
+   "Stage": "Handed over",
+   "Technology": "Search, Language model",
+   "HandedTo": "Colleague Tooling",
+   "Outcome": "Faster",
+   "Result": "Answers in 38 seconds on average, down from 59.",
+   "NowStatus": "Live"
+  },
+  {
+   "Title": "Chatbot for pension transfers",
+   "Stage": "Stopped",
+   "Technology": "Agent",
+   "SponsorArea": "Pensions Operations",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Auto-tag inbound email",
+   "Stage": "Stopped",
+   "Technology": "Classification",
+   "SponsorArea": "Customer Care",
+   "Outcome": "Faster"
+  }
+ ],
+ "Radar": [
+  {
+   "Title": "Copilot Studio agents",
+   "Number": 1,
+   "Quadrant": "Agents and AI",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Shadow testing for agents",
+   "Number": 2,
+   "Quadrant": "Agents and AI",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Speech to text",
+   "Number": 3,
+   "Quadrant": "Agents and AI",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Vision models for forms",
+   "Number": 4,
+   "Quadrant": "Agents and AI",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Multi-agent workflows",
+   "Number": 5,
+   "Quadrant": "Agents and AI",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Fully autonomous decisions",
+   "Number": 6,
+   "Quadrant": "Agents and AI",
+   "Ring": "Hold"
+  },
+  {
+   "Title": "Blue Prism",
+   "Number": 7,
+   "Quadrant": "Automation",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Power Automate",
+   "Number": 8,
+   "Quadrant": "Automation",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Reusable services on Google Cloud",
+   "Number": 9,
+   "Quadrant": "Automation",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "WorkHQ",
+   "Number": 10,
+   "Quadrant": "Automation",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Screen-scraping new systems",
+   "Number": 11,
+   "Quadrant": "Automation",
+   "Ring": "Hold"
+  },
+  {
+   "Title": "Power BI and Deneb",
+   "Number": 12,
+   "Quadrant": "Data and insight",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Synthetic data",
+   "Number": 13,
+   "Quadrant": "Data and insight",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Journey telemetry",
+   "Number": 14,
+   "Quadrant": "Data and insight",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Process mining at scale",
+   "Number": 15,
+   "Quadrant": "Data and insight",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Knowledge search",
+   "Number": 16,
+   "Quadrant": "Colleague experience",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Voice notes",
+   "Number": 17,
+   "Quadrant": "Colleague experience",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "One sign-in",
+   "Number": 18,
+   "Quadrant": "Colleague experience",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Simulated customer practice",
+   "Number": 19,
+   "Quadrant": "Colleague experience",
+   "Ring": "Assess"
+  }
+ ],
+ "Programme": [
+  {
+   "Title": "Task mining",
+   "Description": "Records how work is really done on colleague desktops, with screenshots switched off.",
+   "Team": "Process Intelligence",
+   "State": "Working",
+   "Stage": "Sense"
+  },
+  {
+   "Title": "Process map drafting",
+   "Description": "Drafts a process map from the conversation that designs a new process.",
+   "Team": "Process Intelligence",
+   "State": "Building",
+   "Stage": "Sense"
+  },
+  {
+   "Title": "Opportunity scoring",
+   "Description": "Ranks candidate processes by volume, effort and risk.",
+   "Team": "Process Intelligence",
+   "State": "Assessing",
+   "Stage": "Sense"
+  },
+  {
+   "Title": "Journey telemetry",
+   "Description": "Measures how the hero journeys our automations support perform, and where they slow down.",
+   "Team": "Automated Services",
+   "State": "Building",
+   "Stage": "Understand"
+  },
+  {
+   "Title": "Value and cost dashboard",
+   "Description": "Every automation's performance and cost on one page, from the estate's own logs.",
+   "Team": "Automated Services",
+   "State": "Building",
+   "Stage": "Understand"
+  },
+  {
+   "Title": "Reusable services",
+   "Description": "Business rules built once as services on Google Cloud, used by every platform.",
+   "Team": "Automated Services",
+   "State": "Building",
+   "Stage": "Act"
+  },
+  {
+   "Title": "Complaint preparation agent",
+   "Description": "Gathers and checks the facts so a complaint handler decides with everything in front of them.",
+   "Team": "Agent Engineering",
+   "State": "Working",
+   "Stage": "Act"
+  },
+  {
+   "Title": "Letter drafting agent",
+   "Description": "Drafts customer letters for a colleague to check and send.",
+   "Team": "Agent Engineering",
+   "State": "Assessing",
+   "Stage": "Act"
+  },
+  {
+   "Title": "Agent shadow testing",
+   "Description": "New agents run unseen on real cases and are compared with what happened.",
+   "Team": "Agent Engineering",
+   "State": "Working",
+   "Stage": "Prove"
+  },
+  {
+   "Title": "Decision records",
+   "Description": "Every agent action kept: inputs, output and the colleague's decision.",
+   "Team": "Agent Engineering",
+   "State": "Building",
+   "Stage": "Prove"
+  }
+ ]
+}

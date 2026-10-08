@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 168,
+  "width": 372,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "flex-direction": "column",
+      "width": "100%",
+      "height": "100%",
+      "box-sizing": "border-box",
+      "padding": "18px",
+      "background-color": "#FFFFFF",
+      "border": "1px solid #E1DFDD",
+      "border-radius": "4px",
+      "box-shadow": "0 1.6px 3.6px rgba(0,0,0,0.13), 0 0.3px 0.9px rgba(0,0,0,0.11)",
+      "overflow": "hidden",
+      "cursor": "default"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "justify-content": "space-between",
+          "align-items": "flex-start"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "[$Title]",
+            "style": {
+              "font-size": "18px",
+              "font-weight": "600",
+              "color": "#252423",
+              "line-height": "1.3",
+              "padding-right": "12px"
+            }
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "text-align": "right",
+              "flex-shrink": "0"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "txtContent": "[$Headcount]",
+                "style": {
+                  "font-size": "26px",
+                  "font-weight": "700",
+                  "color": "#CE143D",
+                  "line-height": "1"
+                }
+              },
+              {
+                "elmType": "div",
+                "txtContent": "people",
+                "style": {
+                  "font-size": "11px",
+                  "color": "#605E5C"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Description]",
+        "style": {
+          "font-size": "14px",
+          "color": "#605E5C",
+          "line-height": "1.5",
+          "margin-top": "10px"
+        }
+      }
+    ]
+  }
+}

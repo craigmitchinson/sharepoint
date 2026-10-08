@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ranked horizontal bars with labels: incidents by digital worker, exceptions by reason, cases by business area, pipeline by stage, licence use. Fields: Category, Amount, Label.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Cases completed by business area",
+    "subtitle": "Year to date, all areas"
+  },
+  "width": "container",
+  "height": {
+    "step": 34
+  },
+  "encoding": {
+    "y": {
+      "field": "Category",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null,
+      "axis": {
+        "labelFontSize": 12,
+        "labelColor": "#3B3A39"
+      }
+    },
+    "x": {
+      "field": "Amount",
+      "type": "quantitative",
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 9,
+        "height": 18,
+        "color": "#CE143D"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8
+      },
+      "encoding": {
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ]
+}

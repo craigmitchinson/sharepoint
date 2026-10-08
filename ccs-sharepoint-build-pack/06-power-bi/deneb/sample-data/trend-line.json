@@ -1,0 +1,42 @@
+[
+ {
+  "Period": "2023-01-01",
+  "Series": "Output",
+  "Amount": 100
+ },
+ {
+  "Period": "2024-01-01",
+  "Series": "Output",
+  "Amount": 118
+ },
+ {
+  "Period": "2025-01-01",
+  "Series": "Output",
+  "Amount": 142
+ },
+ {
+  "Period": "2026-01-01",
+  "Series": "Output",
+  "Amount": 163
+ },
+ {
+  "Period": "2023-01-01",
+  "Series": "Headcount",
+  "Amount": 100
+ },
+ {
+  "Period": "2024-01-01",
+  "Series": "Headcount",
+  "Amount": 104
+ },
+ {
+  "Period": "2025-01-01",
+  "Series": "Headcount",
+  "Amount": 106
+ },
+ {
+  "Period": "2026-01-01",
+  "Series": "Headcount",
+  "Amount": 108
+ }
+]

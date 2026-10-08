@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "=if(@currentField == '', 'none', 'inline-block')",
+    "white-space": "nowrap",
+    "font-size": "11.5px",
+    "font-weight": "600",
+    "padding": "1px 8px",
+    "border-radius": "999px",
+    "background-color": "#F7F4FC",
+    "border": "1px solid #D3C3EE",
+    "color": "#4F2391"
+  },
+  "txtContent": "@currentField"
+}

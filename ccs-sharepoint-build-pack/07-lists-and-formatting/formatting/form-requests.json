@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/form-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "width": "100%",
+    "border-top": "6px solid #CE143D",
+    "padding-top": "12px"
+  },
+  "children": [
+    {
+      "elmType": "div",
+      "txtContent": "Automated Services team",
+      "style": {
+        "font-size": "20px",
+        "font-weight": "600",
+        "color": "#252423"
+      }
+    },
+    {
+      "elmType": "div",
+      "txtContent": "Is a live automation stopping customers or colleagues right now? Raise an incident in ServiceNow to [assignment group] instead of using this form.",
+      "style": {
+        "font-size": "13px",
+        "color": "#A11030",
+        "margin-top": "6px",
+        "line-height": "1.45"
+      }
+    }
+  ]
+}

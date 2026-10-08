@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "attributes": {
+    "class": "=if(@currentField == 'Working', 'ms-bgColor-themePrimary ms-fontColor-white', '')"
+  },
+  "style": {
+    "display": "=if(@currentField == '', 'none', 'inline-block')",
+    "padding": "2px 8px",
+    "border-radius": "2px",
+    "font-size": "12px",
+    "font-weight": "600",
+    "line-height": "18px",
+    "background-color": "=if(@currentField == 'Building', '#F5EAD1', if(@currentField == 'Assessing', '#FFFFFF', if(@currentField == 'Working', '', '#EDEBE9')))",
+    "color": "=if(@currentField == 'Building', '#754F00', if(@currentField == 'Assessing', '#605E5C', if(@currentField == 'Working', '', '#323130')))",
+    "border": "=if(@currentField == 'Assessing', '1px dashed #8A8886', 'none')"
+  },
+  "txtContent": "@currentField"
+}

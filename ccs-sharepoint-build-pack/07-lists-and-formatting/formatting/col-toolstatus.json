@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "=if(@currentField == '', 'none', 'inline-block')",
+    "white-space": "nowrap",
+    "padding": "2px 8px",
+    "border-radius": "2px",
+    "font-size": "12px",
+    "font-weight": "600",
+    "line-height": "18px",
+    "background-color": "=if(@currentField == 'Live', '#E3F1DF', if(@currentField == 'Pilot', '#DDE3EF', if(@currentField == 'Next', '#F5EAD1', if(@currentField == 'Retiring', '#F3F2F1', '#EDEBE9'))))",
+    "color": "=if(@currentField == 'Live', '#39682E', if(@currentField == 'Pilot', '#273860', if(@currentField == 'Next', '#754F00', if(@currentField == 'Retiring', '#605E5C', '#323130'))))"
+  },
+  "txtContent": "@currentField"
+}

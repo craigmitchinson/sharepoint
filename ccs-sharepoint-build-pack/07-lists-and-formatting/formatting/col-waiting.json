@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "color": "=if(floor((Number(@now) - Number([$Created])) / 86400000) > 14, '#A11030', '#323130')",
+    "font-weight": "=if(floor((Number(@now) - Number([$Created])) / 86400000) > 14, '600', '400')"
+  },
+  "txtContent": "=floor((Number(@now) - Number([$Created])) / 86400000) + ' days'"
+}

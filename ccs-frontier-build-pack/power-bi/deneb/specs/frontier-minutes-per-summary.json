@@ -1,0 +1,196 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Horizontal bars on a light track with value labels (minutes per case summary, by hand against each week of the experiment). Fields: Category, Amount, Label (formatted text), Track (the largest value, the same on every row). Kind: Baseline (by hand, grey), Test, Latest (darkest).",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Minutes to write a case summary",
+    "subtitle": "Median, by hand against with a voice note"
+  },
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "y": {
+      "field": "Category",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelFontSize": 12,
+        "labelColor": "#3B3A39",
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#F3F2F1",
+        "cornerRadiusEnd": 9,
+        "height": 22
+      },
+      "encoding": {
+        "x": {
+          "aggregate": "max",
+          "field": "Track",
+          "type": "quantitative",
+          "axis": null,
+          "title": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 9,
+        "height": 22
+      },
+      "encoding": {
+        "x": {
+          "field": "Amount",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Category"
+          },
+          {
+            "field": "Label"
+          }
+        ],
+        "color": {
+          "field": "Kind",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Baseline",
+              "Test",
+              "Latest"
+            ],
+            "range": [
+              "#ACB5C7",
+              "#7A4CC4",
+              "#4F2391"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontWeight": 600,
+        "color": "#15223E"
+      },
+      "encoding": {
+        "x": {
+          "aggregate": "max",
+          "field": "Track",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Label"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#15223E",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "Target",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": "height"
+        }
+      },
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "Target",
+              "as": "Target"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "Target",
+              "as": "Target"
+            },
+            {
+              "op": "max",
+              "field": "TargetLabel",
+              "as": "TargetLabel"
+            }
+          ]
+        },
+        {
+          "calculate": "'By hand ' + datum.TargetLabel",
+          "as": "tl"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": -4,
+        "dy": -6,
+        "fontSize": 11,
+        "fontWeight": 400,
+        "color": "#605E5C"
+      },
+      "encoding": {
+        "x": {
+          "field": "Target",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": -4
+        },
+        "text": {
+          "field": "tl"
+        }
+      }
+    }
+  ],
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "Amount",
+          "as": "m"
+        },
+        {
+          "op": "max",
+          "field": "Target",
+          "as": "t"
+        }
+      ]
+    },
+    {
+      "calculate": "max(datum.m, datum.t || 0) * 1.08",
+      "as": "Track"
+    }
+  ]
+}

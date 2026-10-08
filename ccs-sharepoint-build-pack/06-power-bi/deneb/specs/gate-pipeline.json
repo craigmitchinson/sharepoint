@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Gate pipeline: one tile per gate, count large, Sustained highlighted. Fields: Gate, GateOrder, Count. Page 1280 x 180, embedded at height 180.",
+  "data": {
+    "name": "dataset"
+  },
+  "width": "container",
+  "height": 120,
+  "encoding": {
+    "x": {
+      "field": "Gate",
+      "type": "ordinal",
+      "sort": {
+        "field": "GateOrder"
+      },
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 6,
+        "stroke": "#EDEBE9",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": 120
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Gate==='Sustained'",
+            "value": "#CE143D"
+          },
+          "value": "#FFFFFF"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "y": {
+          "value": 18
+        },
+        "text": {
+          "field": "GateLabel"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Gate==='Sustained'",
+            "value": "#F6D5DC"
+          },
+          "value": "#605E5C"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "fontSize": 14,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "y": {
+          "value": 36
+        },
+        "text": {
+          "field": "Gate"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Gate==='Sustained'",
+            "value": "#FFFFFF"
+          },
+          "value": "#15223E"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "fontSize": 30,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "y": {
+          "value": 62
+        },
+        "text": {
+          "field": "Count",
+          "aggregate": "sum"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.Gate==='Sustained'",
+            "value": "#FFFFFF"
+          },
+          "value": "#15223E"
+        }
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "'Gate ' + datum.GateOrder",
+      "as": "GateLabel"
+    }
+  ]
+}

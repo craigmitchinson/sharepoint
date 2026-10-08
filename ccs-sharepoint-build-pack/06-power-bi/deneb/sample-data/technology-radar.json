@@ -1,0 +1,116 @@
+[
+ {
+  "Number": 1,
+  "Name": "Copilot Studio agents",
+  "Quadrant": "Agents and AI",
+  "Ring": "Adopt"
+ },
+ {
+  "Number": 2,
+  "Name": "Shadow testing for agents",
+  "Quadrant": "Agents and AI",
+  "Ring": "Trial"
+ },
+ {
+  "Number": 3,
+  "Name": "Speech to text",
+  "Quadrant": "Agents and AI",
+  "Ring": "Trial"
+ },
+ {
+  "Number": 4,
+  "Name": "Vision models for forms",
+  "Quadrant": "Agents and AI",
+  "Ring": "Assess"
+ },
+ {
+  "Number": 5,
+  "Name": "Multi-agent workflows",
+  "Quadrant": "Agents and AI",
+  "Ring": "Assess"
+ },
+ {
+  "Number": 6,
+  "Name": "Fully autonomous decisions",
+  "Quadrant": "Agents and AI",
+  "Ring": "Hold"
+ },
+ {
+  "Number": 7,
+  "Name": "Blue Prism",
+  "Quadrant": "Automation",
+  "Ring": "Adopt"
+ },
+ {
+  "Number": 8,
+  "Name": "Power Automate",
+  "Quadrant": "Automation",
+  "Ring": "Adopt"
+ },
+ {
+  "Number": 9,
+  "Name": "Reusable services on Google Cloud",
+  "Quadrant": "Automation",
+  "Ring": "Trial"
+ },
+ {
+  "Number": 10,
+  "Name": "WorkHQ",
+  "Quadrant": "Automation",
+  "Ring": "Assess"
+ },
+ {
+  "Number": 11,
+  "Name": "Screen-scraping new systems",
+  "Quadrant": "Automation",
+  "Ring": "Hold"
+ },
+ {
+  "Number": 12,
+  "Name": "Power BI and Deneb",
+  "Quadrant": "Data and insight",
+  "Ring": "Adopt"
+ },
+ {
+  "Number": 13,
+  "Name": "Synthetic data",
+  "Quadrant": "Data and insight",
+  "Ring": "Trial"
+ },
+ {
+  "Number": 14,
+  "Name": "Journey telemetry",
+  "Quadrant": "Data and insight",
+  "Ring": "Trial"
+ },
+ {
+  "Number": 15,
+  "Name": "Process mining at scale",
+  "Quadrant": "Data and insight",
+  "Ring": "Assess"
+ },
+ {
+  "Number": 16,
+  "Name": "Knowledge search",
+  "Quadrant": "Colleague experience",
+  "Ring": "Adopt"
+ },
+ {
+  "Number": 17,
+  "Name": "Voice notes",
+  "Quadrant": "Colleague experience",
+  "Ring": "Trial"
+ },
+ {
+  "Number": 18,
+  "Name": "One sign-in",
+  "Quadrant": "Colleague experience",
+  "Ring": "Assess"
+ },
+ {
+  "Number": 19,
+  "Name": "Simulated customer practice",
+  "Quadrant": "Colleague experience",
+  "Ring": "Assess"
+ }
+]

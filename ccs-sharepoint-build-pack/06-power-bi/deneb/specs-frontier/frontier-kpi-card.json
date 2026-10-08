@@ -1,0 +1,211 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "KPI card: label, value, comparison pill and sparkline. Fields: Label, Value (formatted text measure), Comparison (text), Direction (up|down|flat), Period, PeriodValue. One visual per card, 300 x 200 on a 1280 x 220 page.",
+  "data": {
+    "name": "dataset"
+  },
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 96,
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#605E5C",
+            "dx": 0,
+            "dy": 0
+          },
+          "encoding": {
+            "x": {
+              "value": 0
+            },
+            "y": {
+              "value": 0
+            },
+            "text": {
+              "field": "Label"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "fontSize": 30,
+            "fontWeight": 700,
+            "color": "#15223E"
+          },
+          "encoding": {
+            "x": {
+              "value": 0
+            },
+            "y": {
+              "value": 24
+            },
+            "text": {
+              "field": "Value"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "calculate": "datum.Comparison",
+              "as": "c"
+            },
+            {
+              "calculate": "datum.Direction",
+              "as": "d"
+            },
+            {
+              "calculate": "length(datum.c)*6.4+18",
+              "as": "w"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "rect",
+                "cornerRadius": 10,
+                "height": 20
+              },
+              "encoding": {
+                "x": {
+                  "value": 0
+                },
+                "x2": {
+                  "field": "w",
+                  "type": "quantitative",
+                  "scale": null
+                },
+                "y": {
+                  "value": 66
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.d==='up'",
+                    "value": "#E3F1DF"
+                  },
+                  "value": "transparent"
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "middle",
+                "fontSize": 11.5,
+                "fontWeight": 600
+              },
+              "encoding": {
+                "x": {
+                  "value": 9
+                },
+                "y": {
+                  "value": 76
+                },
+                "text": {
+                  "field": "c"
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.d==='up'",
+                    "value": "#39682E"
+                  },
+                  "value": "#605E5C"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rn"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rn===1"
+        }
+      ]
+    },
+    {
+      "width": "container",
+      "height": 34,
+      "encoding": {
+        "x": {
+          "field": "Period",
+          "type": "ordinal",
+          "axis": null
+        },
+        "y": {
+          "field": "PeriodValue",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "zero": false
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "area",
+            "color": "#ACB5C7",
+            "opacity": 0.28
+          }
+        },
+        {
+          "mark": {
+            "type": "line",
+            "color": "#7C89A6",
+            "strokeWidth": 1.6
+          }
+        },
+        {
+          "transform": [
+            {
+              "window": [
+                {
+                  "op": "rank",
+                  "as": "r"
+                }
+              ],
+              "sort": [
+                {
+                  "field": "Period",
+                  "order": "descending"
+                }
+              ]
+            },
+            {
+              "filter": "datum.r===1"
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "color": "#4F2391",
+            "size": 36,
+            "filled": true
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "concat": {
+      "spacing": 4
+    }
+  }
+}

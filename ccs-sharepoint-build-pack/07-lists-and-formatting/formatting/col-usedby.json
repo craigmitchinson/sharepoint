@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "flex",
+    "flex-wrap": "wrap"
+  },
+  "children": [
+    {
+      "forEach": "lab in @currentField",
+      "elmType": "div",
+      "txtContent": "[$lab]",
+      "style": {
+        "white-space": "nowrap",
+        "font-size": "11.5px",
+        "font-weight": "600",
+        "padding": "2px 8px",
+        "border-radius": "2px",
+        "margin": "0 4px 4px 0",
+        "background-color": "=if([$lab] == '24x7 Services', '#FBE3D5', if([$lab] == 'Automated Operations', '#D8DCE4', if([$lab] == 'Colleague Tooling', '#D5E0ED', if([$lab] == 'Data & Insights', '#D1E9EB', '#EDEBE9'))))",
+        "color": "=if([$lab] == '24x7 Services', '#5C260A', if([$lab] == 'Automated Operations', '#1C2E53', if([$lab] == 'Colleague Tooling', '#133F7A', if([$lab] == 'Data & Insights', '#006670', '#323130'))))"
+      }
+    }
+  ]
+}

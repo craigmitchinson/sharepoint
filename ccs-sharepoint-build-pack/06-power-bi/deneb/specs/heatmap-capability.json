@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Capability heatmap: people per domain at each Dreyfus level. Fields: Domain, Level (Novice..Expert), LevelOrder, People.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Team capability by domain",
+    "subtitle": "People at each Dreyfus level"
+  },
+  "width": "container",
+  "height": {
+    "step": 34
+  },
+  "encoding": {
+    "y": {
+      "field": "Domain",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelFontSize": 12,
+        "labelColor": "#3B3A39",
+        "labelFontWeight": 600,
+        "labelLimit": 200
+      }
+    },
+    "x": {
+      "field": "Level",
+      "type": "ordinal",
+      "sort": {
+        "field": "LevelOrder"
+      },
+      "title": null,
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 3,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "People",
+          "type": "quantitative",
+          "legend": null,
+          "scale": {
+            "range": [
+              "#FFFFFF",
+              "#F6D5DC",
+              "#ECA6B5",
+              "#E2728B",
+              "#CE143D",
+              "#A11030"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "People"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.People >= 8",
+            "value": "#FFFFFF"
+          },
+          "value": "#15223E"
+        }
+      }
+    }
+  ]
+}

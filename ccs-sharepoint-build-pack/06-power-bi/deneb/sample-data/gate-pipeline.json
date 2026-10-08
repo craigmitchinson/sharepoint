@@ -1,0 +1,32 @@
+[
+ {
+  "Gate": "Qualified",
+  "GateOrder": 1,
+  "Count": 18
+ },
+ {
+  "Gate": "Viable",
+  "GateOrder": 2,
+  "Count": 11
+ },
+ {
+  "Gate": "Ready to build",
+  "GateOrder": 3,
+  "Count": 7
+ },
+ {
+  "Gate": "Ready to test",
+  "GateOrder": 4,
+  "Count": 5
+ },
+ {
+  "Gate": "Ready to release",
+  "GateOrder": 5,
+  "Count": 3
+ },
+ {
+  "Gate": "Sustained",
+  "GateOrder": 6,
+  "Count": 142
+ }
+]

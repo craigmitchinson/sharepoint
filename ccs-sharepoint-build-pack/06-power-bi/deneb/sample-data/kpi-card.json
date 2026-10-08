@@ -1,0 +1,58 @@
+[
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 1,
+  "PeriodValue": 80
+ },
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 2,
+  "PeriodValue": 84
+ },
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 3,
+  "PeriodValue": 83
+ },
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 4,
+  "PeriodValue": 90
+ },
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 5,
+  "PeriodValue": 92
+ },
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 6,
+  "PeriodValue": 97
+ },
+ {
+  "Label": "Cases completed",
+  "Value": "1.24m",
+  "Comparison": "\u25b2 12% vs last year",
+  "Direction": "up",
+  "Period": 7,
+  "PeriodValue": 104
+ }
+]

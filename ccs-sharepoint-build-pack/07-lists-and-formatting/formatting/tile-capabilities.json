@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 236,
+  "width": 372,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "flex-direction": "column",
+      "width": "100%",
+      "height": "100%",
+      "box-sizing": "border-box",
+      "padding": "18px",
+      "background-color": "#FFFFFF",
+      "border": "1px solid #E1DFDD",
+      "border-radius": "4px",
+      "box-shadow": "0 1.6px 3.6px rgba(0,0,0,0.13), 0 0.3px 0.9px rgba(0,0,0,0.11)",
+      "overflow": "hidden",
+      "cursor": "default"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "width": "36px",
+          "height": "4px",
+          "background-color": "#CE143D",
+          "margin-bottom": "12px",
+          "flex-shrink": "0"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Title]",
+        "style": {
+          "font-size": "18px",
+          "font-weight": "600",
+          "color": "#252423",
+          "line-height": "1.3"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Description]",
+        "style": {
+          "font-size": "14px",
+          "color": "#323130",
+          "line-height": "1.5",
+          "margin-top": "8px"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "='For example: ' + [$Example]",
+        "style": {
+          "margin-top": "auto",
+          "padding-top": "10px",
+          "border-top": "1px solid #EDEBE9",
+          "font-size": "13px",
+          "color": "#605E5C",
+          "line-height": "1.45"
+        }
+      }
+    ]
+  }
+}

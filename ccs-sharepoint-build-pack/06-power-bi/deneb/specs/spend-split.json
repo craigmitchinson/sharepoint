@@ -1,0 +1,173 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Where the money goes: one 100% stacked bar with a legend grid underneath. Fields: Category, Amount, Description.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Where the money goes",
+    "subtitle": "Cost to run, year to date"
+  },
+  "vconcat": [
+    {
+      "width": "container",
+      "height": 36,
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 0,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "Amount",
+          "type": "quantitative",
+          "stack": "normalize",
+          "axis": null
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "People",
+              "Licences",
+              "Infrastructure",
+              "Hub recharge"
+            ],
+            "range": [
+              "#CE143D",
+              "#7C89A6",
+              "#ACB5C7",
+              "#DFB866"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Category"
+          },
+          {
+            "field": "Amount",
+            "format": "\u00a3#,0",
+            "formatType": "pbiFormat"
+          }
+        ],
+        "order": {
+          "field": "Amount",
+          "sort": "descending"
+        },
+        "y": {
+          "datum": "Cost",
+          "type": "nominal",
+          "axis": null,
+          "scale": {
+            "paddingInner": 0,
+            "paddingOuter": 0
+          }
+        }
+      }
+    },
+    {
+      "width": "container",
+      "height": 110,
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Amount",
+              "as": "t"
+            }
+          ]
+        },
+        {
+          "calculate": "format(datum.Amount/datum.t,'.0%')",
+          "as": "Share"
+        },
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "i"
+            }
+          ]
+        },
+        {
+          "calculate": "(datum.i-1)%2",
+          "as": "col"
+        },
+        {
+          "calculate": "floor((datum.i-1)/2)",
+          "as": "row"
+        },
+        {
+          "calculate": "datum.Category + ' \u00b7 ' + datum.Share",
+          "as": "Txt"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "axis": null
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "axis": null
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "shape": "circle",
+            "filled": true,
+            "size": 80,
+            "xOffset": -120
+          },
+          "encoding": {
+            "color": {
+              "field": "Category",
+              "legend": null,
+              "scale": {
+                "domain": [
+                  "People",
+                  "Licences",
+                  "Infrastructure",
+                  "Hub recharge"
+                ],
+                "range": [
+                  "#CE143D",
+                  "#7C89A6",
+                  "#ACB5C7",
+                  "#DFB866"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": -110,
+            "fontWeight": 600
+          },
+          "encoding": {
+            "text": {
+              "field": "Txt"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "shared"
+    }
+  }
+}

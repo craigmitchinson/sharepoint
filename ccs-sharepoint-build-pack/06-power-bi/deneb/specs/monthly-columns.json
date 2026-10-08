@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Monthly volume columns with the latest month highlighted and labelled. Fields: Month (date), Amount.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Claims handled by month",
+    "subtitle": "Last 12 months, thousands"
+  },
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "x": {
+      "field": "Month",
+      "type": "ordinal",
+      "timeUnit": "yearmonth",
+      "title": null,
+      "axis": {
+        "format": "%b"
+      }
+    },
+    "y": {
+      "field": "Amount",
+      "type": "quantitative",
+      "title": null
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "r"
+            }
+          ],
+          "sort": [
+            {
+              "field": "Month",
+              "order": "descending"
+            }
+          ]
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 4,
+        "width": {
+          "band": 0.55
+        }
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.r===1",
+            "value": "#CE143D"
+          },
+          "value": "#E2728B"
+        }
+      }
+    }
+  ]
+}

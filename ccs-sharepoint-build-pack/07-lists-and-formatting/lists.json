@@ -1,0 +1,1391 @@
+{
+  "lists": [
+    {
+      "name": "Capabilities",
+      "site": "Team business",
+      "gallery": "tile-capabilities.json",
+      "fields": [
+        {
+          "name": "Description",
+          "type": "Note"
+        },
+        {
+          "name": "Example",
+          "type": "Note"
+        },
+        {
+          "name": "Featured",
+          "type": "Boolean"
+        },
+        {
+          "name": "SortOrder",
+          "type": "Number"
+        }
+      ],
+      "views": [
+        {
+          "title": "Featured",
+          "fields": [
+            "Title",
+            "Description",
+            "Example"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Featured'/><Value Type='Boolean'>1</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>"
+        },
+        {
+          "title": "Ordered",
+          "fields": [
+            "Title",
+            "Description",
+            "Example",
+            "Featured",
+            "SortOrder"
+          ],
+          "query": "<OrderBy><FieldRef Name='SortOrder'/></OrderBy>"
+        }
+      ]
+    },
+    {
+      "name": "Skills",
+      "site": "Team business",
+      "gallery": "tile-skills.json",
+      "fields": [
+        {
+          "name": "Headcount",
+          "type": "Text"
+        },
+        {
+          "name": "Description",
+          "type": "Note"
+        },
+        {
+          "name": "SortOrder",
+          "type": "Number"
+        }
+      ],
+      "views": []
+    },
+    {
+      "name": "Stories",
+      "site": "Platform",
+      "gallery": "tile-stories.json",
+      "fields": [
+        {
+          "name": "Lab",
+          "type": "Choice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ]
+        },
+        {
+          "name": "Team",
+          "type": "Text",
+          "note": "Team name as it appears in the hub navigation, e.g. Automated Services"
+        },
+        {
+          "name": "BusinessArea",
+          "type": "Choice",
+          "choices": [
+            "Insurance",
+            "Pensions",
+            "Investments",
+            "Shared services"
+          ]
+        },
+        {
+          "name": "Before",
+          "type": "Text"
+        },
+        {
+          "name": "After",
+          "type": "Text"
+        },
+        {
+          "name": "Quote",
+          "type": "Note"
+        }
+      ],
+      "views": []
+    },
+    {
+      "name": "Quotes",
+      "site": "Platform",
+      "titleLabel": "Name",
+      "gallery": "tile-quotes.json",
+      "fields": [
+        {
+          "name": "Lab",
+          "type": "Choice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ]
+        },
+        {
+          "name": "Team",
+          "type": "Text",
+          "note": "Team name as it appears in the hub navigation, e.g. Automated Services"
+        },
+        {
+          "name": "Role",
+          "type": "Text"
+        },
+        {
+          "name": "Quote",
+          "type": "Note"
+        }
+      ],
+      "views": []
+    },
+    {
+      "name": "Platforms",
+      "site": "Team business",
+      "gallery": "tile-platforms.json",
+      "fields": [
+        {
+          "name": "Description",
+          "type": "Note"
+        },
+        {
+          "name": "Status",
+          "type": "Choice",
+          "choices": [
+            "Live",
+            "Next",
+            "Pilot",
+            "Planned"
+          ],
+          "format": "col-platformstatus.json"
+        }
+      ],
+      "views": []
+    },
+    {
+      "name": "Programme",
+      "site": "Lab",
+      "gallery": "tile-labitems.json",
+      "fields": [
+        {
+          "name": "Description",
+          "type": "Note"
+        },
+        {
+          "name": "Stage",
+          "type": "Choice",
+          "choices": [
+            "Sense",
+            "Understand",
+            "Act",
+            "Prove"
+          ]
+        },
+        {
+          "name": "State",
+          "type": "Choice",
+          "choices": [
+            "Working",
+            "Building",
+            "Assessing"
+          ],
+          "format": "col-labstate.json"
+        },
+        {
+          "name": "Team",
+          "type": "Text",
+          "note": "The team in this Lab doing the work"
+        },
+        {
+          "name": "SortOrder",
+          "type": "Number"
+        }
+      ],
+      "views": [
+        {
+          "title": "Board",
+          "layout": "Board, grouped by Stage (bucket order Sense, Understand, Act, Prove)",
+          "fields": [
+            "Title",
+            "Description",
+            "Team",
+            "State"
+          ],
+          "note": "Create in the browser: + Add view, Board, group by Stage. Then Format current view, Advanced mode, paste tile-programme-board.json"
+        },
+        {
+          "title": "Cards",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "State"
+          ],
+          "note": "Dark cards used on the team business site's Our Lab work page (tile-labitems.json)"
+        }
+      ],
+      "note": "One per Lab hub (/sites/ccs-{lab}/Lists/Programme). State 'Working' takes the site theme colour.",
+      "board": "tile-programme-board.json"
+    },
+    {
+      "name": "Solutions",
+      "site": "Platform",
+      "fields": [
+        {
+          "name": "Lab",
+          "type": "Choice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ]
+        },
+        {
+          "name": "Team",
+          "type": "Text",
+          "note": "Team name as it appears in the hub navigation, e.g. Automated Services"
+        },
+        {
+          "name": "SolutionType",
+          "type": "Choice",
+          "choices": [
+            "Digital worker",
+            "App",
+            "Agent",
+            "Service",
+            "Report",
+            "Site"
+          ],
+          "format": "col-solutiontype.json"
+        },
+        {
+          "name": "BusinessArea",
+          "type": "Choice",
+          "choices": [
+            "Insurance",
+            "Pensions",
+            "Investments",
+            "Shared services"
+          ]
+        },
+        {
+          "name": "Squad",
+          "type": "Choice",
+          "choices": [
+            "Service",
+            "Squad 1",
+            "Squad 2",
+            "Squad 3",
+            "Squad 4"
+          ]
+        },
+        {
+          "name": "Status",
+          "type": "Choice",
+          "choices": [
+            "Live",
+            "In build",
+            "Retired"
+          ]
+        },
+        {
+          "name": "Owner",
+          "type": "User"
+        },
+        {
+          "name": "HeroJourney",
+          "display": "Hero journey",
+          "type": "Choice",
+          "choices": [
+            "Make a claim",
+            "Change a policy",
+            "Transfer a pension",
+            "Take retirement income",
+            "Keep my details up to date",
+            "Report a death",
+            "Make a complaint",
+            "None"
+          ]
+        },
+        {
+          "name": "CasesThisYear",
+          "display": "Cases this year",
+          "type": "Number"
+        },
+        {
+          "name": "ValueThisYear",
+          "display": "Value this year",
+          "type": "Currency"
+        },
+        {
+          "name": "SolutionPage",
+          "display": "Solution page",
+          "type": "URL"
+        },
+        {
+          "name": "ReviewBy",
+          "display": "Review by",
+          "type": "DateTime"
+        }
+      ],
+      "views": [
+        {
+          "title": "Live in Insurance",
+          "fields": [
+            "Title",
+            "SolutionType"
+          ],
+          "query": "<Where><And><Eq><FieldRef Name='BusinessArea'/><Value Type='Choice'>Insurance</Value></Eq><Eq><FieldRef Name='Status'/><Value Type='Choice'>Live</Value></Eq></And></Where><OrderBy><FieldRef Name='Title'/></OrderBy>",
+          "note": "Team sites filter this view by Lab and Team in the List web part"
+        },
+        {
+          "title": "Live in Pensions",
+          "fields": [
+            "Title",
+            "SolutionType"
+          ],
+          "query": "<Where><And><Eq><FieldRef Name='BusinessArea'/><Value Type='Choice'>Pensions</Value></Eq><Eq><FieldRef Name='Status'/><Value Type='Choice'>Live</Value></Eq></And></Where><OrderBy><FieldRef Name='Title'/></OrderBy>",
+          "note": "Team sites filter this view by Lab and Team in the List web part"
+        },
+        {
+          "title": "Live in Investments",
+          "fields": [
+            "Title",
+            "SolutionType"
+          ],
+          "query": "<Where><And><Eq><FieldRef Name='BusinessArea'/><Value Type='Choice'>Investments</Value></Eq><Eq><FieldRef Name='Status'/><Value Type='Choice'>Live</Value></Eq></And></Where><OrderBy><FieldRef Name='Title'/></OrderBy>",
+          "note": "Team sites filter this view by Lab and Team in the List web part"
+        },
+        {
+          "title": "All live",
+          "fields": [
+            "Title",
+            "SolutionType",
+            "BusinessArea",
+            "Squad",
+            "Owner"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Status'/><Value Type='Choice'>Live</Value></Eq></Where><OrderBy><FieldRef Name='BusinessArea'/><FieldRef Name='Title'/></OrderBy>",
+          "note": "Team sites filter this view by Lab and Team in the List web part"
+        }
+      ]
+    },
+    {
+      "name": "Requests",
+      "site": "Platform",
+      "titleLabel": "Request",
+      "readOwnItemsOnly": true,
+      "formHeader": "form-requests.json",
+      "fields": [
+        {
+          "name": "Lab",
+          "type": "Choice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ]
+        },
+        {
+          "name": "Team",
+          "type": "Text",
+          "note": "Team name as it appears in the hub navigation, e.g. Automated Services"
+        },
+        {
+          "name": "IASolution",
+          "display": "Solution",
+          "type": "Lookup",
+          "lookupList": "Solutions"
+        },
+        {
+          "name": "IADetails",
+          "display": "Details",
+          "type": "Note"
+        },
+        {
+          "name": "IAWhatHappened",
+          "display": "What happened",
+          "type": "Note"
+        },
+        {
+          "name": "IAImpact",
+          "display": "Impact",
+          "type": "Choice",
+          "choices": [
+            "Stopping work",
+            "Slowing work",
+            "Minor"
+          ]
+        },
+        {
+          "name": "IAStarted",
+          "display": "When it started",
+          "type": "DateTime"
+        },
+        {
+          "name": "IAChangeType",
+          "display": "Change type",
+          "type": "Choice",
+          "choices": [
+            "Change what it does",
+            "Change when it runs",
+            "A system it uses is changing"
+          ]
+        },
+        {
+          "name": "IASystemChangeDate",
+          "display": "When the system changes",
+          "type": "DateTime"
+        },
+        {
+          "name": "IABusinessArea",
+          "display": "Business area",
+          "type": "Choice",
+          "choices": [
+            "Insurance",
+            "Pensions",
+            "Investments",
+            "Shared services"
+          ]
+        },
+        {
+          "name": "IAMonthlyVolume",
+          "display": "Cases a month",
+          "type": "Number"
+        },
+        {
+          "name": "IAMinutesPerCase",
+          "display": "Minutes per case by hand",
+          "type": "Number"
+        },
+        {
+          "name": "IAPain",
+          "display": "What hurts most",
+          "type": "Note"
+        },
+        {
+          "name": "IAStatus",
+          "display": "Status",
+          "type": "Choice",
+          "choices": [
+            "New",
+            "With us",
+            "In progress",
+            "Done",
+            "Not a fit"
+          ],
+          "format": "col-requeststatus.json",
+          "internalOnly": true
+        },
+        {
+          "name": "IASquad",
+          "display": "Squad",
+          "type": "Choice",
+          "choices": [
+            "Service",
+            "Squad 1",
+            "Squad 2",
+            "Squad 3",
+            "Squad 4"
+          ],
+          "internalOnly": true
+        },
+        {
+          "name": "IAGate",
+          "display": "Gate",
+          "type": "Choice",
+          "choices": [
+            "Qualified",
+            "Viable",
+            "Ready to build",
+            "Ready to test",
+            "Ready to release",
+            "Sustained"
+          ],
+          "format": "col-gate.json",
+          "internalOnly": true
+        },
+        {
+          "name": "IAWaiting",
+          "display": "Waiting",
+          "type": "Text",
+          "format": "col-waiting.json",
+          "internalOnly": true
+        }
+      ],
+      "contentTypes": [
+        {
+          "name": "Question",
+          "fields": [
+            "IASolution",
+            "IADetails"
+          ]
+        },
+        {
+          "name": "Problem",
+          "fields": [
+            "IASolution",
+            "IAWhatHappened",
+            "IAImpact",
+            "IAStarted"
+          ]
+        },
+        {
+          "name": "Change",
+          "fields": [
+            "IASolution",
+            "IAChangeType",
+            "IASystemChangeDate",
+            "IADetails"
+          ]
+        },
+        {
+          "name": "New idea",
+          "fields": [
+            "IABusinessArea",
+            "IAMonthlyVolume",
+            "IAMinutesPerCase",
+            "IAPain"
+          ]
+        }
+      ],
+      "views": [
+        {
+          "title": "My requests",
+          "fields": [
+            "Title",
+            "ContentType",
+            "IASolution",
+            "IAStatus",
+            "Created"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Author'/><Value Type='Integer'><UserID Type='Integer'/></Value></Eq></Where><OrderBy><FieldRef Name='Created' Ascending='FALSE'/></OrderBy>"
+        },
+        {
+          "title": "Triage",
+          "fields": [
+            "Title",
+            "IASolution",
+            "IAStatus",
+            "IASquad",
+            "IAGate",
+            "IAWaiting",
+            "Author"
+          ],
+          "query": "<GroupBy Collapse='FALSE' GroupLimit='100'><FieldRef Name='ContentType'/></GroupBy><Where><And><Neq><FieldRef Name='IAStatus'/><Value Type='Choice'>Done</Value></Neq><Neq><FieldRef Name='IAStatus'/><Value Type='Choice'>Not a fit</Value></Neq></And></Where><OrderBy><FieldRef Name='Created'/></OrderBy>"
+        }
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "site": "Team private",
+      "titleLabel": "Outcome",
+      "fields": [
+        {
+          "name": "BusinessArea",
+          "type": "Choice",
+          "choices": [
+            "Insurance",
+            "Pensions",
+            "Investments",
+            "Shared services",
+            "Whole estate",
+            "Internal"
+          ]
+        },
+        {
+          "name": "Squad",
+          "type": "Choice",
+          "choices": [
+            "Service",
+            "Squad 1",
+            "Squad 2",
+            "Squad 3",
+            "Squad 4"
+          ]
+        },
+        {
+          "name": "Shape",
+          "type": "Choice",
+          "choices": [
+            "Demoable",
+            "Incremental",
+            "Long-build"
+          ],
+          "format": "col-shape.json"
+        },
+        {
+          "name": "Size",
+          "type": "Choice",
+          "choices": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "format": "col-size.json"
+        },
+        {
+          "name": "Gate",
+          "type": "Choice",
+          "choices": [
+            "Qualified",
+            "Viable",
+            "Ready to build",
+            "Ready to test",
+            "Ready to release",
+            "Sustained"
+          ],
+          "format": "col-gate.json"
+        },
+        {
+          "name": "Owner",
+          "type": "User"
+        }
+      ],
+      "views": [
+        {
+          "title": "In flight",
+          "fields": [
+            "Title",
+            "BusinessArea",
+            "Squad",
+            "Shape",
+            "Size",
+            "Gate",
+            "Owner"
+          ],
+          "query": "<Where><Neq><FieldRef Name='Gate'/><Value Type='Choice'>Sustained</Value></Neq></Where><OrderBy><FieldRef Name='Squad'/></OrderBy>"
+        }
+      ]
+    },
+    {
+      "name": "LabInvestigations",
+      "site": "Lab",
+      "fields": [
+        {
+          "name": "Stage",
+          "type": "Choice",
+          "choices": [
+            "1 Sense",
+            "2 Understand",
+            "3 Act",
+            "4 Prove"
+          ]
+        },
+        {
+          "name": "State",
+          "type": "Choice",
+          "choices": [
+            "Working",
+            "Building",
+            "Assessing"
+          ],
+          "format": "col-labstate.json"
+        }
+      ],
+      "views": [
+        {
+          "title": "By stage",
+          "fields": [
+            "Title",
+            "State"
+          ],
+          "query": "<GroupBy Collapse='FALSE' GroupLimit='30'><FieldRef Name='Stage'/></GroupBy><OrderBy><FieldRef Name='Title'/></OrderBy>"
+        }
+      ]
+    },
+    {
+      "name": "ToilLedger",
+      "site": "Team private",
+      "titleLabel": "Toil item",
+      "fields": [
+        {
+          "name": "HoursPerMonth",
+          "type": "Number"
+        },
+        {
+          "name": "Effort",
+          "type": "Choice",
+          "choices": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "format": "col-size.json"
+        },
+        {
+          "name": "Rank",
+          "type": "Number"
+        },
+        {
+          "name": "Status",
+          "type": "Choice",
+          "choices": [
+            "In build",
+            "Next",
+            "Not started",
+            "Done"
+          ],
+          "format": "col-toilstatus.json"
+        }
+      ],
+      "views": [
+        {
+          "title": "Ranked",
+          "fields": [
+            "Title",
+            "HoursPerMonth",
+            "Effort",
+            "Rank",
+            "Status"
+          ],
+          "query": "<OrderBy><FieldRef Name='Rank'/></OrderBy>"
+        }
+      ]
+    },
+    {
+      "name": "Learning",
+      "site": "Team private",
+      "fields": [
+        {
+          "name": "Learner",
+          "type": "User"
+        },
+        {
+          "name": "Towards",
+          "type": "Choice",
+          "choices": [
+            "Novice",
+            "Advanced beginner",
+            "Competent",
+            "Proficient",
+            "Expert"
+          ]
+        },
+        {
+          "name": "Open",
+          "type": "Boolean"
+        }
+      ],
+      "views": [
+        {
+          "title": "Open",
+          "fields": [
+            "Title",
+            "Learner",
+            "Towards"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Open'/><Value Type='Boolean'>1</Value></Eq></Where>"
+        }
+      ]
+    },
+    {
+      "name": "CapabilityGaps",
+      "site": "Team private",
+      "titleLabel": "Domain",
+      "fields": [
+        {
+          "name": "BelowCompetent",
+          "type": "Text"
+        },
+        {
+          "name": "Plan",
+          "type": "Note"
+        }
+      ],
+      "views": []
+    },
+    {
+      "name": "Contacts",
+      "site": "Platform",
+      "fields": [
+        {
+          "name": "Lab",
+          "type": "Choice",
+          "choices": [
+            "Platform",
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights",
+            "Frontier"
+          ]
+        },
+        {
+          "name": "Team",
+          "type": "Text"
+        },
+        {
+          "name": "Person",
+          "type": "User"
+        },
+        {
+          "name": "Topic",
+          "type": "Text"
+        },
+        {
+          "name": "Order",
+          "type": "Number"
+        },
+        {
+          "name": "Role",
+          "type": "Choice",
+          "choices": [
+            "Business Platform Lead",
+            "Technology Platform Lead",
+            "Lab Product Owner",
+            "Lab Engineering Lead",
+            "Product Owner",
+            "Engineering Lead",
+            "Frontier Product Owner",
+            "Frontier Engineering Lead",
+            "Frontier champion",
+            "Front door"
+          ],
+          "note": "Roles named on the pages; the People web parts show these people and the agent names them"
+        }
+      ],
+      "views": [
+        {
+          "title": "By team",
+          "fields": [
+            "Person",
+            "Topic",
+            "Lab",
+            "Team"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Labs",
+      "site": "Platform",
+      "gallery": "tile-labs.json",
+      "fields": [
+        {
+          "name": "Description",
+          "type": "Note"
+        },
+        {
+          "name": "LabMark",
+          "display": "Lab mark",
+          "type": "URL",
+          "note": "Link to the Lab mark PNG in BrandAssets/logos"
+        },
+        {
+          "name": "LabSite",
+          "display": "Lab site",
+          "type": "URL"
+        },
+        {
+          "name": "TeamsCount",
+          "display": "Teams",
+          "type": "Number"
+        },
+        {
+          "name": "People",
+          "type": "Number"
+        },
+        {
+          "name": "LabProductOwner",
+          "display": "Lab Product Owner",
+          "type": "User"
+        },
+        {
+          "name": "LabEngineeringLead",
+          "display": "Lab Engineering Lead",
+          "type": "User"
+        },
+        {
+          "name": "SortOrder",
+          "type": "Number"
+        }
+      ],
+      "views": [
+        {
+          "title": "Cards",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "LabMark",
+            "LabSite",
+            "TeamsCount",
+            "People"
+          ],
+          "query": "<OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Format with tile-labs.json"
+        }
+      ],
+      "note": "One row per Lab. CCS Home shows it as four cards."
+    },
+    {
+      "name": "Teams",
+      "site": "Platform",
+      "gallery": "tile-teams.json",
+      "fields": [
+        {
+          "name": "Lab",
+          "type": "Choice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ]
+        },
+        {
+          "name": "Description",
+          "type": "Note"
+        },
+        {
+          "name": "TeamMark",
+          "display": "Team mark",
+          "type": "URL",
+          "note": "The Lab mark at 64 px; every team in a Lab shows its Lab's mark"
+        },
+        {
+          "name": "TeamSite",
+          "display": "Team site",
+          "type": "URL"
+        },
+        {
+          "name": "People",
+          "type": "Number"
+        },
+        {
+          "name": "SortOrder",
+          "type": "Number"
+        }
+      ],
+      "views": [
+        {
+          "title": "24x7 Services cards",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark",
+            "TeamSite",
+            "People"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>24x7 Services</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Full cards (tile-teams.json) on the Lab's Teams page"
+        },
+        {
+          "title": "Automated Operations cards",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark",
+            "TeamSite",
+            "People"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>Automated Operations</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Full cards (tile-teams.json) on the Lab's Teams page"
+        },
+        {
+          "title": "Colleague Tooling cards",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark",
+            "TeamSite",
+            "People"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>Colleague Tooling</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Full cards (tile-teams.json) on the Lab's Teams page"
+        },
+        {
+          "title": "Data & Insights cards",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark",
+            "TeamSite",
+            "People"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>Data & Insights</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Full cards (tile-teams.json) on the Lab's Teams page"
+        },
+        {
+          "title": "24x7 Services compact",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>24x7 Services</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Compact cards (tile-teams-compact.json) on CCS Labs and each Lab home"
+        },
+        {
+          "title": "Automated Operations compact",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>Automated Operations</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Compact cards (tile-teams-compact.json) on CCS Labs and each Lab home"
+        },
+        {
+          "title": "Colleague Tooling compact",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>Colleague Tooling</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Compact cards (tile-teams-compact.json) on CCS Labs and each Lab home"
+        },
+        {
+          "title": "Data & Insights compact",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Description",
+            "TeamMark"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Lab'/><Value Type='Choice'>Data & Insights</Value></Eq></Where><OrderBy><FieldRef Name='SortOrder'/></OrderBy>",
+          "note": "Compact cards (tile-teams-compact.json) on CCS Labs and each Lab home"
+        }
+      ],
+      "note": "One row per team. Lab hubs show their own view through the Embed web part (view URL with ?env=WebViewList), because the List web part only shows lists on its own site."
+    },
+    {
+      "name": "Tools",
+      "site": "Platform",
+      "fields": [
+        {
+          "name": "Vendor",
+          "type": "Text"
+        },
+        {
+          "name": "Purpose",
+          "display": "What we use it for",
+          "type": "Text"
+        },
+        {
+          "name": "UsedBy",
+          "display": "Used by",
+          "type": "MultiChoice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ],
+          "format": "col-usedby.json"
+        },
+        {
+          "name": "ToolStatus",
+          "display": "Status",
+          "type": "Choice",
+          "choices": [
+            "Live",
+            "Pilot",
+            "Next",
+            "Retiring"
+          ],
+          "format": "col-toolstatus.json"
+        },
+        {
+          "name": "LicenceOwner",
+          "display": "Licence owner",
+          "type": "Text",
+          "note": "A role, not a person: Technology Platform Lead, Business Platform Lead or Lab Engineering Lead, {Lab}"
+        }
+      ],
+      "views": [
+        {
+          "title": "All tools",
+          "fields": [
+            "Title",
+            "Vendor",
+            "Purpose",
+            "UsedBy",
+            "ToolStatus",
+            "LicenceOwner"
+          ],
+          "query": "<OrderBy><FieldRef Name='Title'/></OrderBy>"
+        },
+        {
+          "title": "Used by 24x7 Services",
+          "fields": [
+            "Title",
+            "Vendor",
+            "Purpose",
+            "ToolStatus",
+            "LicenceOwner"
+          ],
+          "query": "<Where><Eq><FieldRef Name='UsedBy'/><Value Type='MultiChoice'>24x7 Services</Value></Eq></Where><OrderBy><FieldRef Name='Title'/></OrderBy>"
+        },
+        {
+          "title": "Used by Automated Operations",
+          "fields": [
+            "Title",
+            "Vendor",
+            "Purpose",
+            "ToolStatus",
+            "LicenceOwner"
+          ],
+          "query": "<Where><Eq><FieldRef Name='UsedBy'/><Value Type='MultiChoice'>Automated Operations</Value></Eq></Where><OrderBy><FieldRef Name='Title'/></OrderBy>"
+        },
+        {
+          "title": "Used by Colleague Tooling",
+          "fields": [
+            "Title",
+            "Vendor",
+            "Purpose",
+            "ToolStatus",
+            "LicenceOwner"
+          ],
+          "query": "<Where><Eq><FieldRef Name='UsedBy'/><Value Type='MultiChoice'>Colleague Tooling</Value></Eq></Where><OrderBy><FieldRef Name='Title'/></OrderBy>"
+        },
+        {
+          "title": "Used by Data & Insights",
+          "fields": [
+            "Title",
+            "Vendor",
+            "Purpose",
+            "ToolStatus",
+            "LicenceOwner"
+          ],
+          "query": "<Where><Eq><FieldRef Name='UsedBy'/><Value Type='MultiChoice'>Data & Insights</Value></Eq></Where><OrderBy><FieldRef Name='Title'/></OrderBy>"
+        }
+      ],
+      "note": "One list of every tool and partner for CCS. Each Lab's Tools and skills page embeds its own view."
+    },
+    {
+      "name": "Ideas",
+      "site": "Frontier",
+      "gallery": "tile-ideas.json",
+      "ratings": "Likes",
+      "fields": [
+        {
+          "name": "Outcome",
+          "type": "Choice",
+          "choices": [
+            "Better service",
+            "Faster",
+            "Lower risk",
+            "Evidence"
+          ],
+          "format": "col-outcome.json",
+          "note": "What better looks like. Better service: for the customer or colleague on the other end. Faster: less time per case or a quicker journey. Lower risk: fewer errors, breaches or manual handling. Evidence: proves or measures an improvement"
+        },
+        {
+          "name": "Theme",
+          "type": "Choice",
+          "choices": [
+            "Customer letters",
+            "Customer contact",
+            "Colleague time",
+            "Process",
+            "Learning",
+            "Other"
+          ]
+        },
+        {
+          "name": "BusinessArea",
+          "display": "Business area",
+          "type": "Choice",
+          "choices": [
+            "Insurance",
+            "Pensions",
+            "Investments",
+            "Shared services"
+          ]
+        },
+        {
+          "name": "Problem",
+          "display": "The problem",
+          "type": "Note"
+        },
+        {
+          "name": "IdeaStatus",
+          "display": "Status",
+          "type": "Choice",
+          "choices": [
+            "New",
+            "Shortlisted",
+            "Chosen",
+            "Parked"
+          ],
+          "format": "col-ideastatus.json"
+        }
+      ],
+      "views": [
+        {
+          "title": "Most liked",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "Theme",
+            "BusinessArea",
+            "IdeaStatus",
+            "LikesCount"
+          ],
+          "query": "<OrderBy><FieldRef Name='LikesCount' Ascending='FALSE'/></OrderBy>",
+          "note": "Format with tile-ideas.json. List settings, Rating settings: allow ratings, Likes. The LikesCount column appears then."
+        }
+      ],
+      "note": "Anyone in CCS-AllColleagues can add (Contribute on this list only)."
+    },
+    {
+      "name": "Experiments",
+      "site": "Frontier",
+      "board": "tile-experiment-board.json",
+      "gallery": "tile-handed-over.json",
+      "fields": [
+        {
+          "name": "Stage",
+          "type": "Choice",
+          "choices": [
+            "Explore",
+            "Test",
+            "Decide",
+            "Handed over",
+            "Stopped"
+          ],
+          "format": "col-experimentstage.json"
+        },
+        {
+          "name": "Outcome",
+          "type": "Choice",
+          "choices": [
+            "Better service",
+            "Faster",
+            "Lower risk",
+            "Evidence"
+          ],
+          "format": "col-outcome.json",
+          "note": "What better looks like. Better service: for whoever is on the other end. Faster: less time per case or a quicker journey. Lower risk: fewer errors, breaches or manual handling. Evidence: proves or measures an improvement"
+        },
+        {
+          "name": "Technology",
+          "type": "Text",
+          "note": "Shown as a chip, e.g. Speech to text"
+        },
+        {
+          "name": "SponsorArea",
+          "display": "Sponsor",
+          "type": "Text",
+          "note": "The business team or Lab team that owns the problem"
+        },
+        {
+          "name": "HandedTo",
+          "display": "Handed to",
+          "type": "Choice",
+          "choices": [
+            "24x7 Services",
+            "Automated Operations",
+            "Colleague Tooling",
+            "Data & Insights"
+          ]
+        },
+        {
+          "name": "Result",
+          "display": "Outcome achieved",
+          "type": "Note",
+          "note": "One sentence with the measured result, shown on the Handed over cards"
+        },
+        {
+          "name": "NowStatus",
+          "display": "Now",
+          "type": "Text"
+        },
+        {
+          "name": "ExperimentPage",
+          "display": "Experiment page",
+          "type": "URL"
+        },
+        {
+          "name": "IdeaRef",
+          "display": "From idea",
+          "type": "Lookup",
+          "lookupList": "Ideas"
+        }
+      ],
+      "views": [
+        {
+          "title": "Board",
+          "layout": "Board, grouped by Stage (bucket order Explore, Test, Decide, Handed over, Stopped)",
+          "fields": [
+            "Title",
+            "Outcome",
+            "Technology",
+            "SponsorArea",
+            "Stage"
+          ],
+          "note": "Format with tile-experiment-board.json"
+        },
+        {
+          "title": "Handed over",
+          "layout": "Gallery",
+          "fields": [
+            "Title",
+            "HandedTo",
+            "Result",
+            "NowStatus",
+            "Stage"
+          ],
+          "query": "<Where><Eq><FieldRef Name='Stage'/><Value Type='Choice'>Handed over</Value></Eq></Where>",
+          "note": "Format with tile-handed-over.json"
+        }
+      ]
+    },
+    {
+      "name": "Radar",
+      "site": "Frontier",
+      "fields": [
+        {
+          "name": "Number",
+          "type": "Number"
+        },
+        {
+          "name": "Quadrant",
+          "type": "Choice",
+          "choices": [
+            "Agents and AI",
+            "Automation",
+            "Data and insight",
+            "Colleague experience"
+          ]
+        },
+        {
+          "name": "Ring",
+          "type": "Choice",
+          "choices": [
+            "Adopt",
+            "Trial",
+            "Assess",
+            "Hold"
+          ]
+        },
+        {
+          "name": "Why",
+          "type": "Note"
+        }
+      ],
+      "views": [],
+      "note": "Source for the technology radar (Deneb technology-radar spec). Reviewed quarterly."
+    }
+  ],
+  "note": "site: Platform lists live once on /sites/ccs; Lab lists on each Lab hub; Frontier lists on /sites/ccs-frontier; Team lists on each team site. Lab hubs and team sites show platform lists through the Embed web part with the list view URL plus ?env=WebViewList, because the List web part only shows lists on its own site."
+}

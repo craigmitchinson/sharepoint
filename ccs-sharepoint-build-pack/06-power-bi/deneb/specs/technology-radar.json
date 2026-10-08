@@ -1,0 +1,392 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Technology radar: four rings (Adopt, Trial, Assess, Hold) and four quadrants, one numbered dot per technology, with the numbered list beside it. Fields: Number, Name, Quadrant (Agents and AI, Automation, Data and insight, Colleague experience), Ring (Adopt, Trial, Assess, Hold). Dots spread themselves within their ring and quadrant.",
+  "title": {
+    "text": "Technology radar",
+    "subtitle": "What we use, trial, assess or avoid · reviewed quarterly"
+  },
+  "data": {
+    "name": "dataset"
+  },
+  "hconcat": [
+    {
+      "width": 420,
+      "height": 420,
+      "layer": [
+        {
+          "data": {
+            "values": [
+              {
+                "Ring": "Hold",
+                "sz": 176400,
+                "o": 0
+              },
+              {
+                "Ring": "Assess",
+                "sz": 99225,
+                "o": 1
+              },
+              {
+                "Ring": "Trial",
+                "sz": 44100,
+                "o": 2
+              },
+              {
+                "Ring": "Adopt",
+                "sz": 11025,
+                "o": 3
+              }
+            ]
+          },
+          "mark": {
+            "type": "circle",
+            "opacity": 1,
+            "stroke": "#FFFFFF",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "x": {
+              "datum": 0,
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -1,
+                  1
+                ]
+              },
+              "axis": null
+            },
+            "y": {
+              "datum": 0,
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -1,
+                  1
+                ]
+              },
+              "axis": null
+            },
+            "size": {
+              "field": "sz",
+              "type": "quantitative",
+              "scale": null,
+              "legend": null
+            },
+            "order": {
+              "field": "o"
+            },
+            "color": {
+              "field": "Ring",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  "Adopt",
+                  "Trial",
+                  "Assess",
+                  "Hold"
+                ],
+                "range": [
+                  "#D9C9EE",
+                  "#E5DAF3",
+                  "#EFE8F8",
+                  "#F7F4FC"
+                ]
+              },
+              "legend": null
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x1": -1,
+                "x2": 1,
+                "y1": 0,
+                "y2": 0
+              },
+              {
+                "x1": 0,
+                "x2": 0,
+                "y1": -1,
+                "y2": 1
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "color": "#FFFFFF",
+            "strokeWidth": 3
+          },
+          "encoding": {
+            "x": {
+              "field": "x1",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -1,
+                  1
+                ]
+              },
+              "axis": null
+            },
+            "x2": {
+              "field": "x2"
+            },
+            "y": {
+              "field": "y1",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -1,
+                  1
+                ]
+              },
+              "axis": null
+            },
+            "y2": {
+              "field": "y2"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "calculate": "indexof(['Adopt','Trial','Assess','Hold'], datum.Ring)",
+              "as": "ri"
+            },
+            {
+              "calculate": "indexof(['Automation','Agents and AI','Data and insight','Colleague experience'], datum.Quadrant)",
+              "as": "qi"
+            },
+            {
+              "window": [
+                {
+                  "op": "row_number",
+                  "as": "k"
+                },
+                {
+                  "op": "count",
+                  "as": "n"
+                }
+              ],
+              "groupby": [
+                "qi",
+                "ri"
+              ],
+              "frame": [
+                null,
+                null
+              ]
+            },
+            {
+              "calculate": "(datum.ri + 0.5) / 4 + ((datum.k % 2) - 0.5) * 0.08",
+              "as": "rad"
+            },
+            {
+              "calculate": "datum.qi * PI/2 + (datum.k / (datum.n + 1)) * PI/2",
+              "as": "ang"
+            },
+            {
+              "calculate": "cos(datum.ang) * datum.rad",
+              "as": "px"
+            },
+            {
+              "calculate": "sin(datum.ang) * datum.rad",
+              "as": "py"
+            }
+          ],
+          "layer": [
+            {
+              "mark": {
+                "type": "circle",
+                "size": 220,
+                "opacity": 1
+              },
+              "encoding": {
+                "x": {
+                  "field": "px",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "axis": null
+                },
+                "y": {
+                  "field": "py",
+                  "type": "quantitative",
+                  "scale": {
+                    "domain": [
+                      -1,
+                      1
+                    ]
+                  },
+                  "axis": null
+                },
+                "color": {
+                  "condition": {
+                    "test": "datum.Ring == 'Hold'",
+                    "value": "#605E5C"
+                  },
+                  "value": "#4F2391"
+                },
+                "tooltip": [
+                  {
+                    "field": "Number"
+                  },
+                  {
+                    "field": "Name"
+                  },
+                  {
+                    "field": "Ring"
+                  },
+                  {
+                    "field": "Quadrant"
+                  }
+                ]
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "color": "#FFFFFF",
+                "fontSize": 10,
+                "fontWeight": 700
+              },
+              "encoding": {
+                "x": {
+                  "field": "px",
+                  "type": "quantitative"
+                },
+                "y": {
+                  "field": "py",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "Number"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "t": "ADOPT",
+                "x": 0.17
+              },
+              {
+                "t": "TRIAL",
+                "x": 0.42
+              },
+              {
+                "t": "ASSESS",
+                "x": 0.67
+              },
+              {
+                "t": "HOLD",
+                "x": 0.92
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "fontSize": 9,
+            "fontWeight": 700,
+            "color": "#4F2391",
+            "dy": 10
+          },
+          "encoding": {
+            "x": {
+              "field": "x",
+              "type": "quantitative"
+            },
+            "y": {
+              "datum": 0,
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "t"
+            }
+          }
+        }
+      ],
+      "resolve": {
+        "scale": {
+          "color": "independent"
+        }
+      }
+    },
+    {
+      "width": 300,
+      "height": {
+        "step": 16
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "color": "#323130"
+      },
+      "transform": [
+        {
+          "calculate": "datum.Number + '   ' + datum.Name + ' · ' + datum.Ring",
+          "as": "line"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "Number",
+          "type": "ordinal",
+          "sort": {
+            "field": "Number"
+          },
+          "axis": null
+        },
+        "row": {
+          "field": "Quadrant",
+          "type": "nominal",
+          "title": null,
+          "header": {
+            "labelFontWeight": 700,
+            "labelColor": "#252423",
+            "labelAngle": 0,
+            "labelAlign": "left",
+            "labelOrient": "top",
+            "labelFontSize": 11
+          },
+          "sort": [
+            "Agents and AI",
+            "Automation",
+            "Data and insight",
+            "Colleague experience"
+          ]
+        },
+        "x": {
+          "value": 0
+        },
+        "text": {
+          "field": "line"
+        }
+      },
+      "resolve": {
+        "scale": {
+          "y": "independent"
+        }
+      }
+    }
+  ],
+  "config": {
+    "concat": {
+      "spacing": 24
+    },
+    "facet": {
+      "spacing": 8
+    }
+  }
+}

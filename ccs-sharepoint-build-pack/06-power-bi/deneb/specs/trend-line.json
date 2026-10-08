@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Trend over months or years, indexed or absolute, with end-point label. Fields: Period (date), Series, Amount.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Headcount and output",
+    "subtitle": "Indexed to 2023 = 100"
+  },
+  "width": "container",
+  "height": "container",
+  "encoding": {
+    "x": {
+      "field": "Period",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "format": "%Y",
+        "tickCount": "year"
+      }
+    },
+    "y": {
+      "field": "Amount",
+      "type": "quantitative",
+      "title": null
+    },
+    "color": {
+      "field": "Series",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Output",
+          "Headcount"
+        ],
+        "range": [
+          "#CE143D",
+          "#7C89A6"
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.4,
+        "interpolate": "monotone"
+      }
+    },
+    {
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "r"
+            }
+          ],
+          "groupby": [
+            "Series"
+          ],
+          "sort": [
+            {
+              "field": "Period",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.r===1"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "size": 50,
+            "filled": true
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 8,
+            "fontWeight": 600
+          },
+          "encoding": {
+            "text": {
+              "field": "Series"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

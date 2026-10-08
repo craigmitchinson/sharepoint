@@ -1,0 +1,80 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 190,
+  "width": 290,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "a",
+    "style": {
+      "display": "flex",
+      "flex-direction": "column",
+      "width": "100%",
+      "height": "100%",
+      "box-sizing": "border-box",
+      "background-color": "#FFFFFF",
+      "border": "1px solid #E1DFDD",
+      "border-radius": "6px",
+      "overflow": "hidden",
+      "padding": "18px",
+      "gap": "10px",
+      "text-decoration": "none"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "align-items": "center",
+          "gap": "12px"
+        },
+        "children": [
+          {
+            "elmType": "img",
+            "style": {
+              "width": "44px",
+              "height": "44px",
+              "flex": "0 0 44px"
+            },
+            "attributes": {
+              "src": "[$LabMark]",
+              "alt": ""
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$Title]",
+            "style": {
+              "font-size": "17px",
+              "font-weight": "600",
+              "color": "#252423"
+            }
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Description]",
+        "style": {
+          "font-size": "14px",
+          "line-height": "1.5",
+          "color": "#323130"
+        }
+      },
+      {
+        "elmType": "div",
+        "txtContent": "=[$TeamsCount] + ' teams · ' + [$People] + ' people'",
+        "style": {
+          "font-size": "12px",
+          "color": "#605E5C",
+          "margin-top": "auto"
+        }
+      }
+    ],
+    "attributes": {
+      "href": "[$LabSite]",
+      "target": "_self",
+      "title": "[$Title]"
+    }
+  }
+}

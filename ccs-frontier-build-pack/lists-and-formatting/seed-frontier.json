@@ -1,0 +1,273 @@
+{
+ "Ideas": [
+  {
+   "Title": "Letters customers can read first time",
+   "Theme": "Customer letters",
+   "IdeaStatus": "Chosen",
+   "BusinessArea": "Pensions",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Know why a customer is calling before we answer",
+   "Theme": "Customer contact",
+   "IdeaStatus": "Shortlisted",
+   "BusinessArea": "Insurance",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Draft the file note from the call",
+   "Theme": "Colleague time",
+   "IdeaStatus": "Shortlisted",
+   "BusinessArea": "Investments",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Check a pension pack is complete on arrival",
+   "Theme": "Process",
+   "IdeaStatus": "New",
+   "BusinessArea": "Pensions",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Show handlers which cases are about to breach",
+   "Theme": "Colleague time",
+   "IdeaStatus": "New",
+   "BusinessArea": "Insurance",
+   "Outcome": "Lower risk"
+  },
+  {
+   "Title": "A single view of what a customer has asked us",
+   "Theme": "Customer contact",
+   "IdeaStatus": "Parked",
+   "BusinessArea": "Shared services",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Translate letters into Welsh automatically",
+   "Theme": "Customer letters",
+   "IdeaStatus": "New",
+   "BusinessArea": "Pensions",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Practise difficult calls with a simulated customer",
+   "Theme": "Learning",
+   "IdeaStatus": "Shortlisted",
+   "BusinessArea": "Insurance",
+   "Outcome": "Better service"
+  }
+ ],
+ "Experiments": [
+  {
+   "Title": "Letters customers can read",
+   "Stage": "Explore",
+   "Technology": "Language model",
+   "SponsorArea": "Pensions Operations",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Spot a struggling customer sooner",
+   "Stage": "Explore",
+   "Technology": "Speech analytics",
+   "SponsorArea": "Customer Care",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Test data that looks real",
+   "Stage": "Explore",
+   "Technology": "Synthetic data",
+   "SponsorArea": "Automated Services",
+   "Outcome": "Lower risk"
+  },
+  {
+   "Title": "Voice notes to case summaries",
+   "Stage": "Test",
+   "Technology": "Speech to text, Language model",
+   "SponsorArea": "Claims, Insurance",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Read handwritten claim forms",
+   "Stage": "Test",
+   "Technology": "Vision model",
+   "SponsorArea": "Claims, Insurance",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Map a process from a Teams call",
+   "Stage": "Test",
+   "Technology": "Copilot Studio",
+   "SponsorArea": "Process Intelligence",
+   "Outcome": "Evidence"
+  },
+  {
+   "Title": "Answer policy questions in chat",
+   "Stage": "Test",
+   "Technology": "Agent, Knowledge",
+   "SponsorArea": "Customer Care",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Predict tomorrow’s workload",
+   "Stage": "Decide",
+   "Technology": "Forecasting",
+   "SponsorArea": "Workforce Planning",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "One sign-in for every tool",
+   "Stage": "Decide",
+   "Technology": "Identity",
+   "SponsorArea": "Colleague Tooling",
+   "Outcome": "Faster"
+  },
+  {
+   "Title": "Complaint preparation agent",
+   "Stage": "Handed over",
+   "Technology": "Agent",
+   "HandedTo": "Automated Operations",
+   "Outcome": "Lower risk",
+   "Result": "Handlers start every complaint with the facts gathered and checked.",
+   "NowStatus": "In shadow testing"
+  },
+  {
+   "Title": "Knowledge search that answers",
+   "Stage": "Handed over",
+   "Technology": "Search, Language model",
+   "HandedTo": "Colleague Tooling",
+   "Outcome": "Faster",
+   "Result": "Answers in 38 seconds on average, down from 59.",
+   "NowStatus": "Live"
+  },
+  {
+   "Title": "Chatbot for pension transfers",
+   "Stage": "Stopped",
+   "Technology": "Agent",
+   "SponsorArea": "Pensions Operations",
+   "Outcome": "Better service"
+  },
+  {
+   "Title": "Auto-tag inbound email",
+   "Stage": "Stopped",
+   "Technology": "Classification",
+   "SponsorArea": "Customer Care",
+   "Outcome": "Faster"
+  }
+ ],
+ "Radar": [
+  {
+   "Title": "Copilot Studio agents",
+   "Number": 1,
+   "Quadrant": "Agents and AI",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Shadow testing for agents",
+   "Number": 2,
+   "Quadrant": "Agents and AI",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Speech to text",
+   "Number": 3,
+   "Quadrant": "Agents and AI",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Vision models for forms",
+   "Number": 4,
+   "Quadrant": "Agents and AI",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Multi-agent workflows",
+   "Number": 5,
+   "Quadrant": "Agents and AI",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Fully autonomous decisions",
+   "Number": 6,
+   "Quadrant": "Agents and AI",
+   "Ring": "Hold"
+  },
+  {
+   "Title": "Blue Prism",
+   "Number": 7,
+   "Quadrant": "Automation",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Power Automate",
+   "Number": 8,
+   "Quadrant": "Automation",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Reusable services on Google Cloud",
+   "Number": 9,
+   "Quadrant": "Automation",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "WorkHQ",
+   "Number": 10,
+   "Quadrant": "Automation",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Screen-scraping new systems",
+   "Number": 11,
+   "Quadrant": "Automation",
+   "Ring": "Hold"
+  },
+  {
+   "Title": "Power BI and Deneb",
+   "Number": 12,
+   "Quadrant": "Data and insight",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Synthetic data",
+   "Number": 13,
+   "Quadrant": "Data and insight",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Journey telemetry",
+   "Number": 14,
+   "Quadrant": "Data and insight",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "Process mining at scale",
+   "Number": 15,
+   "Quadrant": "Data and insight",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Knowledge search",
+   "Number": 16,
+   "Quadrant": "Colleague experience",
+   "Ring": "Adopt"
+  },
+  {
+   "Title": "Voice notes",
+   "Number": 17,
+   "Quadrant": "Colleague experience",
+   "Ring": "Trial"
+  },
+  {
+   "Title": "One sign-in",
+   "Number": 18,
+   "Quadrant": "Colleague experience",
+   "Ring": "Assess"
+  },
+  {
+   "Title": "Simulated customer practice",
+   "Number": 19,
+   "Quadrant": "Colleague experience",
+   "Ring": "Assess"
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "Quarter": "Q1 25",
+  "Measure": "Value",
+  "Amount": 1600000.0
+ },
+ {
+  "Quarter": "Q1 25",
+  "Measure": "Cost to run",
+  "Amount": 680000.0
+ },
+ {
+  "Quarter": "Q2 25",
+  "Measure": "Value",
+  "Amount": 1800000.0
+ },
+ {
+  "Quarter": "Q2 25",
+  "Measure": "Cost to run",
+  "Amount": 700000.0
+ },
+ {
+  "Quarter": "Q3 25",
+  "Measure": "Value",
+  "Amount": 1900000.0
+ },
+ {
+  "Quarter": "Q3 25",
+  "Measure": "Cost to run",
+  "Amount": 710000.0
+ },
+ {
+  "Quarter": "Q4 25",
+  "Measure": "Value",
+  "Amount": 2100000.0
+ },
+ {
+  "Quarter": "Q4 25",
+  "Measure": "Cost to run",
+  "Amount": 720000.0
+ },
+ {
+  "Quarter": "Q1 26",
+  "Measure": "Value",
+  "Amount": 2300000.0
+ },
+ {
+  "Quarter": "Q1 26",
+  "Measure": "Cost to run",
+  "Amount": 730000.0
+ },
+ {
+  "Quarter": "Q2 26",
+  "Measure": "Value",
+  "Amount": 2500000.0
+ },
+ {
+  "Quarter": "Q2 26",
+  "Measure": "Cost to run",
+  "Amount": 740000.0
+ }
+]

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Horizontal stacked bars with the count inside each segment and a legend underneath (e.g. primary skillsets by squad). Fields: Group, Series, Value, SeriesOrder (1 = first segment).",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Primary skillsets by squad",
+    "subtitle": "Lead included"
+  },
+  "width": "container",
+  "height": {
+    "step": 34
+  },
+  "encoding": {
+    "y": {
+      "field": "Group",
+      "type": "nominal",
+      "title": null,
+      "sort": null,
+      "axis": {
+        "labelFontSize": 12,
+        "labelColor": "#3B3A39",
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "x": {
+      "field": "Value",
+      "type": "quantitative",
+      "stack": "zero",
+      "axis": null,
+      "title": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 22,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "Series",
+          "type": "nominal",
+          "sort": {
+            "field": "SeriesOrder"
+          },
+          "scale": {
+            "range": [
+              "#CE143D",
+              "#7C89A6",
+              "#ACB5C7",
+              "#243B6B"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": null,
+            "symbolType": "square",
+            "labelFontSize": 12,
+            "labelColor": "#3B3A39"
+          }
+        },
+        "order": {
+          "field": "SeriesOrder"
+        },
+        "tooltip": [
+          {
+            "field": "Group"
+          },
+          {
+            "field": "Series"
+          },
+          {
+            "field": "Value"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#FFFFFF",
+        "fontSize": 12,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "stack": "zero",
+          "bandPosition": 0.5
+        },
+        "order": {
+          "field": "SeriesOrder"
+        },
+        "detail": {
+          "field": "Series"
+        },
+        "text": {
+          "field": "Value"
+        }
+      }
+    }
+  ]
+}

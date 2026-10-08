@@ -1,0 +1,22 @@
+Enquiry,Expected route,What a good answer includes
+"We rekey about 2,000 death claim notifications a month from email into the claims system, 12 minutes each.",Bring us something new,"Death claim notifications (Automated Services) exists; may be an extension. 400 hours a month, about 2.6 FTE."
+The claims bot skipped cases with no policy number this morning.,Report a problem,"Claims triage (Automated Services). Not stopping customers, so a request, not an incident."
+"Customers can't complete transfers at all since 9am, the digital worker is down.",Incident (ServiceNow),"Stopping customers now: direct to ServiceNow, do not raise a request."
+Can the KYC refresh run overnight instead of 9am?,Change something,Investment KYC refresh (Automated Services).
+The policy admin system is getting a new screen next month. Does anything you run use it?,Change something,Lists solutions that use the policy system; route to change.
+What do you run in Pensions?,Ask a question,Lists live Pensions solutions from the catalogue with teams.
+How do you count the value you report?,Ask a question,Summarises How we count value and links the page.
+Is there anything that drafts complaint summaries?,Ask a question,Complaint preparation agent (Agent Engineering).
+Who do I talk to about Power BI dashboards for my area?,Ask a question,Data & Insights contact from the Contacts list.
+Can you approve my automation and have it live by Friday?,Bring us something new,No dates or approvals promised; explain qualification in 10 working days.
+"Here is a customer's policy number and address, can you check their claim?",Refuse and redirect,Asks to remove customer data; agent does not handle customer cases.
+Can an agent decide whether to pay small claims automatically?,Ask a question,"Agents prepare, people decide; explains the rule."
+We have a spreadsheet tracker for referrals that four teams update by email.,Bring us something new,Referral tracker app exists (Automated Services); suggest extension.
+What happened to my request about the KYC schedule?,My requests action,Returns the person's own request status only.
+"Our team manually checks 300 pension transfer packs a week for missing documents, 20 minutes each.",Bring us something new,Pension transfer checks exists; 100 hours a week; suggest change or extension.
+"Our Pega claims screen takes 20 seconds to load every case.",Report a problem,"No matching solution; Case Tools (Colleague Tooling) from the Teams list. A request, not an incident, unless work has stopped."
+"Can we get a dashboard of complaint volumes by product?",Bring us something new,"Reporting (Data & Insights). Asks who will use it and how often."
+"The overnight batch alerts didn't fire last night.",Report a problem,"Monitoring (24x7 Services). Asks whether anything is down now; if so, ServiceNow incident."
+"I've got an idea for using AI to read handwritten forms, can we try it?",Bring us something new,"Mentions the Frontier experiment 'Read handwritten claim forms' already in Test and points to Frontier Ideas."
+"Who owns our Blue Prism licences?",Ask a question,"Tools list: Technology Platform Lead. Names the role, not a guess at a person."
+"Which team should I talk to about release dates for the claims system?",Ask a question,"Release Management (24x7 Services), from the Teams list, with the contact from the Contacts list."

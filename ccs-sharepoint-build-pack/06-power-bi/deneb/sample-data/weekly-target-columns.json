@@ -1,0 +1,30 @@
+[
+ {
+  "Period": "Wk 1",
+  "PeriodOrder": 1,
+  "Value": 0.61,
+  "IsLatest": false,
+  "Target": 0.8
+ },
+ {
+  "Period": "Wk 2",
+  "PeriodOrder": 2,
+  "Value": 0.72,
+  "IsLatest": false,
+  "Target": 0.8
+ },
+ {
+  "Period": "Wk 3",
+  "PeriodOrder": 3,
+  "Value": 0.79,
+  "IsLatest": false,
+  "Target": 0.8
+ },
+ {
+  "Period": "Wk 4",
+  "PeriodOrder": 4,
+  "Value": 0.84,
+  "IsLatest": true,
+  "Target": 0.8
+ }
+]

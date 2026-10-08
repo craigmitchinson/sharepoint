@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "=if(@currentField == '', 'none', 'inline-block')",
+    "padding": "2px 8px",
+    "border-radius": "2px",
+    "font-size": "12px",
+    "font-weight": "600",
+    "line-height": "18px",
+    "background-color": "=if(@currentField == 'Digital worker', '#D8DCE4', if(@currentField == 'App', '#DDE3EF', if(@currentField == 'Agent', '#F6D5DC', if(@currentField == 'Service', '#D1E9EB', if(@currentField == 'Report', '#F5EAD1', if(@currentField == 'Site', '#EDEBE9', '#EDEBE9'))))))",
+    "color": "=if(@currentField == 'Digital worker', '#15223E', if(@currentField == 'App', '#273860', if(@currentField == 'Agent', '#A11030', if(@currentField == 'Service', '#004C53', if(@currentField == 'Report', '#754F00', if(@currentField == 'Site', '#323130', '#323130'))))))"
+  },
+  "txtContent": "@currentField"
+}

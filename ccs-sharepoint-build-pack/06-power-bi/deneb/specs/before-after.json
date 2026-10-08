@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Before and after for one solution (e.g. minutes per claim). Fields: Stage (Before | After), Amount, Label.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Time to route a claim",
+    "subtitle": "Minutes, by hand against automated"
+  },
+  "width": "container",
+  "height": {
+    "step": 44
+  },
+  "encoding": {
+    "y": {
+      "field": "Stage",
+      "type": "nominal",
+      "sort": [
+        "Before",
+        "After"
+      ],
+      "title": null
+    },
+    "x": {
+      "field": "Amount",
+      "type": "quantitative",
+      "axis": null
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 9,
+        "height": 22
+      },
+      "encoding": {
+        "color": {
+          "field": "Stage",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Before",
+              "After"
+            ],
+            "range": [
+              "#ACB5C7",
+              "#CE143D"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 14,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "field": "Label"
+        }
+      }
+    }
+  ]
+}

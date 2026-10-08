@@ -1,0 +1,62 @@
+[
+ {
+  "Group": "Service",
+  "Series": "Digital Worker",
+  "Value": 6,
+  "SeriesOrder": 1
+ },
+ {
+  "Group": "Service",
+  "Series": "AI engineering",
+  "Value": 4,
+  "SeriesOrder": 2
+ },
+ {
+  "Group": "Squad 1",
+  "Series": "Digital Worker",
+  "Value": 3,
+  "SeriesOrder": 1
+ },
+ {
+  "Group": "Squad 1",
+  "Series": "AI engineering",
+  "Value": 2,
+  "SeriesOrder": 2
+ },
+ {
+  "Group": "Squad 2",
+  "Series": "Digital Worker",
+  "Value": 2,
+  "SeriesOrder": 1
+ },
+ {
+  "Group": "Squad 2",
+  "Series": "AI engineering",
+  "Value": 3,
+  "SeriesOrder": 2
+ },
+ {
+  "Group": "Squad 3",
+  "Series": "Digital Worker",
+  "Value": 1,
+  "SeriesOrder": 1
+ },
+ {
+  "Group": "Squad 3",
+  "Series": "Power Platform",
+  "Value": 4,
+  "SeriesOrder": 3
+ },
+ {
+  "Group": "Squad 4",
+  "Series": "Digital Worker",
+  "Value": 3,
+  "SeriesOrder": 1
+ },
+ {
+  "Group": "Squad 4",
+  "Series": "Power Platform",
+  "Value": 2,
+  "SeriesOrder": 3
+ }
+]

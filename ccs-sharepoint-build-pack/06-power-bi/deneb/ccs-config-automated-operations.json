@@ -1,0 +1,120 @@
+{
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "font": "Segoe UI",
+  "padding": {
+    "left": 4,
+    "right": 4,
+    "top": 4,
+    "bottom": 4
+  },
+  "view": {
+    "stroke": "transparent"
+  },
+  "range": {
+    "category": [
+      "#CE143D",
+      "#ACB5C7",
+      "#243B6B",
+      "#7C89A6",
+      "#DFB866",
+      "#00838F"
+    ],
+    "ordinal": {
+      "scheme": "reds"
+    },
+    "heatmap": [
+      "#FFFFFF",
+      "#F6D5DC",
+      "#ECA6B5",
+      "#E2728B",
+      "#CE143D",
+      "#A11030"
+    ]
+  },
+  "axis": {
+    "labelFont": "Segoe UI",
+    "labelFontSize": 11,
+    "labelColor": "#605E5C",
+    "titleFont": "Segoe UI",
+    "titleFontSize": 11,
+    "titleColor": "#605E5C",
+    "titleFontWeight": 400,
+    "domainColor": "#C8C6C4",
+    "tickColor": "#C8C6C4",
+    "gridColor": "#EDEBE9",
+    "gridDash": [
+      3,
+      3
+    ],
+    "labelPadding": 6
+  },
+  "axisX": {
+    "grid": false,
+    "tickSize": 0
+  },
+  "axisY": {
+    "domain": false,
+    "tickSize": 0,
+    "tickCount": 4
+  },
+  "axisBand": {
+    "grid": false
+  },
+  "legend": {
+    "orient": "bottom",
+    "direction": "horizontal",
+    "labelFont": "Segoe UI",
+    "labelFontSize": 12,
+    "labelColor": "#3B3A39",
+    "symbolType": "circle",
+    "symbolSize": 80,
+    "title": null,
+    "columnPadding": 16
+  },
+  "title": {
+    "font": "Segoe UI",
+    "fontSize": 15,
+    "fontWeight": 700,
+    "color": "#15223E",
+    "anchor": "start",
+    "subtitleFont": "Segoe UI",
+    "subtitleFontSize": 12,
+    "subtitleColor": "#605E5C",
+    "offset": 14
+  },
+  "bar": {
+    "cornerRadiusEnd": 4,
+    "color": "#CE143D"
+  },
+  "line": {
+    "strokeWidth": 2,
+    "color": "#7C89A6"
+  },
+  "area": {
+    "color": "#ACB5C7",
+    "opacity": 0.28
+  },
+  "point": {
+    "filled": true,
+    "size": 40,
+    "color": "#CE143D"
+  },
+  "rect": {
+    "cornerRadius": 3
+  },
+  "text": {
+    "font": "Segoe UI",
+    "fontSize": 12,
+    "fontWeight": 600,
+    "color": "#15223E"
+  },
+  "rule": {
+    "color": "#15223E",
+    "strokeWidth": 2
+  },
+  "customFormatTypes": true
+}

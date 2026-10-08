@@ -1,0 +1,22 @@
+[
+ {
+  "Category": "People",
+  "Amount": 1680000.0,
+  "Description": ""
+ },
+ {
+  "Category": "Licences",
+  "Amount": 640000.0,
+  "Description": ""
+ },
+ {
+  "Category": "Infrastructure",
+  "Amount": 350000.0,
+  "Description": ""
+ },
+ {
+  "Category": "Hub recharge",
+  "Amount": 230000.0,
+  "Description": ""
+ }
+]

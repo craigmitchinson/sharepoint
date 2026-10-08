@@ -1,0 +1,23 @@
+[
+ {
+  "Category": "By hand",
+  "Amount": 9.1,
+  "Label": "9.1 min",
+  "Track": 9.1,
+  "Kind": "Baseline"
+ },
+ {
+  "Category": "Voice note, week 1",
+  "Amount": 3.8,
+  "Label": "3.8 min",
+  "Track": 9.1,
+  "Kind": "Test"
+ },
+ {
+  "Category": "Voice note, week 4",
+  "Amount": 2.2,
+  "Label": "2.2 min",
+  "Track": 9.1,
+  "Kind": "Latest"
+ }
+]

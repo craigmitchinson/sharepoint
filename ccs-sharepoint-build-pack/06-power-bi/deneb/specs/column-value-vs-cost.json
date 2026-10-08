@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Value against cost to run by quarter. Fields: Quarter, Measure (Value | Cost to run), Amount. Page 16:9, visual 1240 x 600 within 1280 x 720.",
+  "data": {
+    "name": "dataset"
+  },
+  "title": {
+    "text": "Value against cost to run",
+    "subtitle": "By quarter"
+  },
+  "width": "container",
+  "height": "container",
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4,
+    "width": {
+      "band": 0.8
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "Quarter",
+      "type": "ordinal",
+      "title": null,
+      "sort": null,
+      "axis": {
+        "labelAngle": 0
+      },
+      "scale": {
+        "paddingInner": 0.35
+      }
+    },
+    "xOffset": {
+      "field": "Measure"
+    },
+    "y": {
+      "field": "Amount",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "format": "\u00a3#,0,,.0m",
+        "formatType": "pbiFormat"
+      }
+    },
+    "color": {
+      "field": "Measure",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Value",
+          "Cost to run"
+        ],
+        "range": [
+          "#CE143D",
+          "#ACB5C7"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Quarter"
+      },
+      {
+        "field": "Measure"
+      },
+      {
+        "field": "Amount",
+        "format": "\u00a3#,0",
+        "formatType": "pbiFormat"
+      }
+    ]
+  }
+}

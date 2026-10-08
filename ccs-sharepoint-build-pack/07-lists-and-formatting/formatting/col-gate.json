@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "=if(@currentField == '', 'none', 'inline-block')",
+    "padding": "2px 8px",
+    "border-radius": "2px",
+    "font-size": "12px",
+    "font-weight": "600",
+    "line-height": "18px",
+    "background-color": "=if(@currentField == 'Qualified', '#EDEBE9', if(@currentField == 'Viable', '#EDEBE9', if(@currentField == 'Ready to build', '#DDE3EF', if(@currentField == 'Ready to test', '#DDE3EF', if(@currentField == 'Ready to release', '#F5EAD1', if(@currentField == 'Sustained', '#E3F1DF', '#EDEBE9'))))))",
+    "color": "=if(@currentField == 'Qualified', '#252423', if(@currentField == 'Viable', '#252423', if(@currentField == 'Ready to build', '#273860', if(@currentField == 'Ready to test', '#273860', if(@currentField == 'Ready to release', '#754F00', if(@currentField == 'Sustained', '#39682E', '#323130'))))))"
+  },
+  "txtContent": "@currentField"
+}

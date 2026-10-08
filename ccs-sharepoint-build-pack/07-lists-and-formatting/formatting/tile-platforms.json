@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 96,
+  "width": 586,
+  "hideSelection": true,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "flex-direction": "row",
+      "width": "100%",
+      "height": "100%",
+      "box-sizing": "border-box",
+      "padding": "16px 18px",
+      "background-color": "#FFFFFF",
+      "border": "1px solid #E1DFDD",
+      "border-radius": "4px",
+      "box-shadow": "none",
+      "overflow": "hidden",
+      "cursor": "default"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "flex": "1",
+          "padding-right": "16px"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "txtContent": "[$Title]",
+            "style": {
+              "font-size": "15px",
+              "font-weight": "600",
+              "color": "#252423"
+            }
+          },
+          {
+            "elmType": "div",
+            "txtContent": "[$Description]",
+            "style": {
+              "font-size": "13px",
+              "color": "#605E5C",
+              "line-height": "1.5",
+              "margin-top": "2px"
+            }
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$Status]",
+        "style": {
+          "align-self": "flex-start",
+          "font-size": "12px",
+          "font-weight": "600",
+          "padding": "2px 8px",
+          "border-radius": "2px",
+          "white-space": "nowrap",
+          "background-color": "=if([$Status] == 'Live', '#E3F1DF', if([$Status] == 'Next', '#F5EAD1', if([$Status] == 'Pilot', '#DDE3EF', if([$Status] == 'Planned', '#EDEBE9', '#EDEBE9'))))",
+          "color": "=if([$Status] == 'Live', '#39682E', if([$Status] == 'Next', '#754F00', if([$Status] == 'Pilot', '#273860', if([$Status] == 'Planned', '#323130', '#323130'))))"
+        }
+      }
+    ]
+  }
+}

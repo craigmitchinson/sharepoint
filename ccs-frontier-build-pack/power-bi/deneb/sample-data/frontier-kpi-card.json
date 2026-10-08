@@ -1,0 +1,226 @@
+[
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 1,
+  "PeriodValue": 18
+ },
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 2,
+  "PeriodValue": 24
+ },
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 3,
+  "PeriodValue": 31
+ },
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 4,
+  "PeriodValue": 39
+ },
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 5,
+  "PeriodValue": 47
+ },
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 6,
+  "PeriodValue": 55
+ },
+ {
+  "Label": "Ideas raised",
+  "Value": "64",
+  "Comparison": "▲ 22 since June",
+  "Direction": "up",
+  "Period": 7,
+  "PeriodValue": 64
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 1,
+  "PeriodValue": 6
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 2,
+  "PeriodValue": 9
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 3,
+  "PeriodValue": 12
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 4,
+  "PeriodValue": 15
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 5,
+  "PeriodValue": 18
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 6,
+  "PeriodValue": 21
+ },
+ {
+  "Label": "Experiments run",
+  "Value": "23",
+  "Comparison": "11 running now",
+  "Direction": "flat",
+  "Period": 7,
+  "PeriodValue": 23
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 1,
+  "PeriodValue": 1
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 2,
+  "PeriodValue": 1
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 3,
+  "PeriodValue": 2
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 4,
+  "PeriodValue": 3
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 5,
+  "PeriodValue": 4
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 6,
+  "PeriodValue": 5
+ },
+ {
+  "Label": "Handed to a Lab",
+  "Value": "6",
+  "Comparison": "Now in build or live",
+  "Direction": "flat",
+  "Period": 7,
+  "PeriodValue": 6
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 1,
+  "PeriodValue": 40
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 2,
+  "PeriodValue": 71
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 3,
+  "PeriodValue": 98
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 4,
+  "PeriodValue": 126
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 5,
+  "PeriodValue": 160
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 6,
+  "PeriodValue": 188
+ },
+ {
+  "Label": "Colleagues taken part",
+  "Value": "214",
+  "Comparison": "▲ from 9 business teams",
+  "Direction": "up",
+  "Period": 7,
+  "PeriodValue": 214
+ }
+]
