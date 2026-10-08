@@ -41,7 +41,7 @@
           {
             "elmType": "span",
             "attributes": {
-              "iconName": "[$Icon]"
+              "iconName": "=if([$Icon] != '', [$Icon], if(indexOf([$Title], 'idea') > -1, 'Lightbulb', if(indexOf([$Title], 'experiment') > -1, 'TestBeaker', if(indexOf([$Title], 'learned') > -1, 'Video', 'Chat'))))"
             },
             "style": {
               "color": "#FFFFFF",
