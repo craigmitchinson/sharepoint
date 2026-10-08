@@ -14,7 +14,7 @@ Open `index.html` first. It links every page, asset, chart and placeholder in th
 Frontier is a communication site because most visitors come to read, raise an idea or watch a demo, and it should look and navigate like the rest of CCS. Day-to-day experiment work needs co-authoring, chat and channels, which is what a Teams-connected site is for. Finished evidence moves from the team site to the communication site when it is ready to publish, so the public pages only ever show what has been checked.
 
 Setup on the communication site:
-1. Create it (or run `Provision-Sites.ps1` from the full kit): Topic design, title "Frontier", address `ccs-frontier`.
+1. Create it (or run `Provision-Sites.ps1` from the full kit): Communication site, Blank template, title "Frontier", address `ccs-frontier`.
 2. Associate it with the CCS hub (Site information, Hub site association). It is not a hub itself, so it shows the CCS hub navigation; add "Frontier" to the CCS hub navigation, between "How we count value" and "News".
 3. Change the look: theme "CCS frontier" (`theme/sharepoint-theme-frontier.json`, added as a tenant theme by your SharePoint admin). Header: Compact, site title shown, logo `assets/logos/site-logo-frontier_300x300.png`, thumbnail `site-logo-frontier_64x64.png`. Footer: on, logo `footer-logo-ccs-platform-dark_300x300.png`, links Back to CCS, Front door, Trust and controls, How we count value.
 4. Site navigation (horizontal): Home, Ideas, Experiments, Showcase, Methods, Get involved.

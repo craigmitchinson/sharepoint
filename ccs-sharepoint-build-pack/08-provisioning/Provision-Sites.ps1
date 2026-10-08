@@ -51,7 +51,7 @@ if ($AssociatePrivateSite) {
 
 function Ensure-Site($url, $title, $owner) {
   if (-not (Get-PnPTenantSite -Identity $url -ErrorAction SilentlyContinue)) {
-    New-PnPSite -Type CommunicationSite -Title $title -Url $url -SiteDesign Topic -Lcid 2057 | Out-Null
+    New-PnPSite -Type CommunicationSite -Title $title -Url $url -SiteDesign Blank -Lcid 2057 | Out-Null
     Write-Host "Created $url"
   }
   Set-PnPTenantSite -Identity $url -Owners $owner
