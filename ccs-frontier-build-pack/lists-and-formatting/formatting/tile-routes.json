@@ -39,11 +39,24 @@
         },
         "children": [
           {
-            "elmType": "span",
+            "elmType": "img",
             "attributes": {
-              "iconName": "=if([$Icon] != '', [$Icon], if(indexOf([$Title], 'idea') > -1, 'Lightbulb', if(indexOf([$Title], 'experiment') > -1, 'TestBeaker', if(indexOf([$Title], 'learned') > -1, 'Video', 'Chat'))))"
+              "src": "[$IconImage]",
+              "alt": ""
             },
             "style": {
+              "display": "=if([$IconImage] == '', 'none', 'block')",
+              "width": "22px",
+              "height": "22px"
+            }
+          },
+          {
+            "elmType": "span",
+            "attributes": {
+              "iconName": "=if(indexOf([$Title], 'idea') > -1, 'Lightbulb', if(indexOf([$Title], 'experiment') > -1, 'TestBeaker', if(indexOf([$Title], 'learned') > -1, 'Video', 'Chat')))"
+            },
+            "style": {
+              "display": "=if([$IconImage] == '', 'inline-block', 'none')",
               "color": "#FFFFFF",
               "font-size": "20px"
             }

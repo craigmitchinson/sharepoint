@@ -3,7 +3,7 @@
 Quick links can't draw the purple square icons with descriptions, so the cards are a small list shown in a gallery view with `formatting/tile-routes.json`. Every look in the design is then exact, and editing a card is editing a list row.
 
 1. New, List, Blank list, name `Routes`.
-2. Columns: `Description` (Multiple lines of text, plain), `Link` (Hyperlink), `Icon` (Single line of text), `SortOrder` (Number).
+2. Columns: `Description` (Multiple lines of text, plain), `Link` (Hyperlink), `IconImage` (Hyperlink: the address of the white icon PNG, e.g. `icon-route-raise-an-idea--white_96x96.png` uploaded to Site Assets), `SortOrder` (Number). Add every column to the Gallery view (Edit current view). Leave IconImage empty to fall back to a built-in icon.
 3. Rows:
 
 | Title | Description | Link | Icon | SortOrder |
