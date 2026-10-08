@@ -7,7 +7,7 @@ Use this instead of steps 1 to 3 of `01-build-guide.md` when you can create site
 | Needs an admin | What you do instead |
 |---|---|
 | Hub sites (CCS and the Labs as hubs, the hub bar, hub news roll-up) | Every site gets the same top navigation by hand, with a CCS menu first. News and site cards pull from named sites instead of "all sites in the hub" |
-| Custom themes | The closest Microsoft theme per site (table below). Card and pill colours come from the formatting JSON, so they stay exact |
+| Tenant-wide custom themes | A site theme created by you as owner on each site (Site branding, table below) |
 | Organisation assets library | One `Brand` library on CCS holding `assets/`. Pick images from it through "Sites" in the file picker |
 | PnP provisioning scripts | Create lists by hand from `07-lists-and-formatting/lists.json`, then paste the formatting JSON |
 | Entra security groups | Use each site's Owners, Members and Visitors groups, adding people or existing groups you can already see |
@@ -19,18 +19,24 @@ Create each site from the SharePoint start page: Create site, Communication site
 
 ## 2. Theme per site
 
-Settings, Change the look, Theme, From Microsoft:
+Site owners can create their own theme on each site: Settings, Site branding, Theme, + New theme. It can't be switched off by admins, but a theme only exists on the site it was made on, so create it once on every site that uses that colour (a Lab's team sites need their Lab's theme too).
 
-| Site | Theme |
-|---|---|
-| CCS | Cobalt (not Dark Blue or Dark Teal: those are inverted themes with dark page backgrounds) |
-| Automated Operations Lab and its teams | Red |
-| 24x7 Services Lab and its teams | Orange |
-| Colleague Tooling Lab and its teams | Blue |
-| Data & Insights Lab and its teams | Teal |
-| Frontier and Frontier Team | Purple |
+In the theme designer, add the colours below with + Add color (custom colour, type the hex), then add the four combinations with + New combination. Name the theme as shown, save, and pick it in Change the look, Theme.
 
-These are lighter than the design colours. Buttons, links, Soft and Strong sections and active navigation follow the theme; everything else (title images, logos, cards, pills, charts) uses the design colours exactly. If you later get custom themes, switching recolours every page with no rework.
+| Theme name | Colours to add | Combinations (background / accent) |
+|---|---|---|
+| CCS platform | #243B6B, #15223E, #D8DCE4, #ACB5C7 | #FFFFFF / #243B6B · #D8DCE4 / #243B6B · #243B6B / #FFFFFF · #15223E / #ACB5C7 |
+| CCS Automated Operations | #CE143D, #470C1E, #F6D5DC, #ECA6B5 | #FFFFFF / #CE143D · #F6D5DC / #A11030 · #CE143D / #FFFFFF · #470C1E / #ECA6B5 |
+| CCS 24x7 Services | #B84C14, #5C260A, #FBE3D5, #F2BC9C | #FFFFFF / #B84C14 · #FBE3D5 / #8F3A0E · #B84C14 / #FFFFFF · #5C260A / #F2BC9C |
+| CCS Colleague Tooling | #18519D, #0E2F5B, #D5E0ED, #A7BDDA | #FFFFFF / #18519D · #D5E0ED / #133F7A · #18519D / #FFFFFF · #0E2F5B / #A7BDDA |
+| CCS Data & Insights | #00838F, #004C53, #D1E9EB, #9ED0D4 | #FFFFFF / #00838F · #D1E9EB / #006670 · #00838F / #FFFFFF · #004C53 / #9ED0D4 |
+| CCS Frontier | #4F2391, #1E0D3D, #EDE6F7, #D3C3EE | #FFFFFF / #4F2391 · #EDE6F7 / #4F2391 · #4F2391 / #FFFFFF · #1E0D3D / #BBA3EA |
+
+The first colour is the primary (buttons, links, active navigation). The combinations become the section backgrounds you pick when editing a page: white, Soft (light tint), Strong (primary) and Dark (the title-image ground). Where the page build sheets say Neutral, use the grey section background if the theme still offers it, or white.
+
+If the designer won't take a value as typed, use the nearest it offers for that slot; the card, pill and chart colours come from the formatting JSON and Deneb config, so they stay exact regardless.
+
+Fallback with no site branding: the closest Microsoft themes are Cobalt (CCS), Red, Orange, Blue, Teal and Purple. Avoid Dark Blue and Dark Teal, which give the whole site a dark background.
 
 Then, on every site: Change the look, Header: Compact, site title on, logo and thumbnail from `assets/logos` (Lab sites use their Lab mark, Frontier its own logo, CCS the platform logo). Footer: on, logo `footer-logo-ccs-platform-dark_300x300.png`. Navigation: Horizontal, Mega menu on.
 
