@@ -45,6 +45,20 @@
           },
           {
             "elmType": "div",
+            "txtContent": "=if([$HandedTo] == '', [$SponsorArea], 'Handed to ' + [$HandedTo])",
+            "style": {
+              "display": "=if([$SponsorArea] == '' && [$HandedTo] == '', 'none', 'block')",
+              "margin-top": "4px",
+              "font-size": "12.5px",
+              "font-weight": "600",
+              "color": "#4F2391",
+              "line-height": "1.4",
+              "text-align": "left",
+              "white-space": "normal"
+            }
+          },
+          {
+            "elmType": "div",
             "txtContent": "[$Summary]",
             "style": {
               "display": "=if([$Summary] == '', 'none', 'block')",
@@ -60,7 +74,7 @@
             "elmType": "div",
             "style": {
               "display": "block",
-              "margin-top": "7px",
+              "margin-top": "8px",
               "text-align": "left"
             },
             "children": [
@@ -76,45 +90,18 @@
                   "border-radius": "999px",
                   "border": "1px solid #D3C3EE",
                   "color": "#4F2391",
-                  "background-color": "#F7F4FC"
-                }
-              }
-            ]
-          },
-          {
-            "elmType": "div",
-            "style": {
-              "display": "flex",
-              "justify-content": "space-between",
-              "align-items": "center",
-              "margin-top": "7px"
-            },
-            "children": [
-              {
-                "elmType": "span",
-                "txtContent": "=if([$Technology] == '', '', [$Technology] + ' · ') + if([$Stage] == 'Handed over', 'to ' + [$HandedTo], [$SponsorArea])",
-                "style": {
-                  "font-size": "12px",
-                  "color": "#605E5C",
-                  "line-height": "1.4",
-                  "text-align": "left",
-                  "margin-right": "8px"
+                  "background-color": "#F7F4FC",
+                  "margin-right": "6px"
                 }
               },
               {
                 "elmType": "span",
-                "txtContent": "[$Stage]",
+                "txtContent": "[$Technology]",
                 "style": {
-                  "display": "=if([$Stage] == '', 'none', 'inline-block')",
-                  "flex": "0 0 auto",
-                  "white-space": "nowrap",
-                  "padding": "2px 8px",
-                  "border-radius": "2px",
+                  "display": "=if([$Technology] == '', 'none', 'inline-block')",
                   "font-size": "12px",
-                  "font-weight": "600",
-                  "line-height": "18px",
-                  "background-color": "=if([$Stage] == 'Explore', '#EDE6F7', if([$Stage] == 'Test', '#DDE3EF', if([$Stage] == 'Decide', '#F5EAD1', if([$Stage] == 'Handed over', '#E3F1DF', '#F3F2F1'))))",
-                  "color": "=if([$Stage] == 'Explore', '#4F2391', if([$Stage] == 'Test', '#273860', if([$Stage] == 'Decide', '#754F00', if([$Stage] == 'Handed over', '#39682E', '#605E5C'))))"
+                  "color": "#605E5C",
+                  "line-height": "1.4"
                 }
               }
             ]
