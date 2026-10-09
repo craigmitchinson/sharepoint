@@ -117,9 +117,9 @@
               },
               {
                 "elmType": "span",
-                "txtContent": "[$Stage]",
+                "txtContent": "[$board_x0020_choice]",
                 "style": {
-                  "display": "=if([$Stage] == '', 'none', 'inline-block')",
+                  "display": "=if([$board_x0020_choice] == '', 'none', 'inline-block')",
                   "flex": "0 0 auto",
                   "white-space": "nowrap",
                   "padding": "2px 8px",
@@ -127,8 +127,8 @@
                   "font-size": "12px",
                   "font-weight": "600",
                   "line-height": "18px",
-                  "background-color": "=if([$Stage] == 'Explore', '#EDE6F7', if([$Stage] == 'Test', '#DDE3EF', if([$Stage] == 'Decide', '#F5EAD1', if([$Stage] == 'Handed over', '#E3F1DF', '#F3F2F1'))))",
-                  "color": "=if([$Stage] == 'Explore', '#4F2391', if([$Stage] == 'Test', '#273860', if([$Stage] == 'Decide', '#754F00', if([$Stage] == 'Handed over', '#39682E', '#605E5C'))))"
+                  "background-color": "=if([$board_x0020_choice] == 'Explore', '#EDE6F7', if([$board_x0020_choice] == 'Test', '#DDE3EF', if([$board_x0020_choice] == 'Decide', '#F5EAD1', if([$board_x0020_choice] == 'Handed over', '#E3F1DF', '#F3F2F1'))))",
+                  "color": "=if([$board_x0020_choice] == 'Explore', '#4F2391', if([$board_x0020_choice] == 'Test', '#273860', if([$board_x0020_choice] == 'Decide', '#754F00', if([$board_x0020_choice] == 'Handed over', '#39682E', '#605E5C'))))"
                 }
               }
             ]
