@@ -1,220 +1,226 @@
 {
-  "note": "Frontier lists, all on /sites/ccs-frontier. Create with Provision-Lists.ps1 -Site Frontier from the full kit, or by hand from this file.",
-  "lists": [
+ "note": "Frontier lists, all on /sites/ccs-frontier. Create with Provision-Lists.ps1 -Site Frontier from the full kit, or by hand from this file.",
+ "lists": [
+  {
+   "name": "Ideas",
+   "site": "Frontier",
+   "gallery": "tile-ideas.json",
+   "ratings": "Likes",
+   "fields": [
     {
-      "name": "Ideas",
-      "site": "Frontier",
-      "gallery": "tile-ideas.json",
-      "ratings": "Likes",
-      "fields": [
-        {
-          "name": "Outcome",
-          "type": "Choice",
-          "choices": [
-            "Better service",
-            "Faster",
-            "Lower risk",
-            "Evidence"
-          ],
-          "format": "col-outcome.json",
-          "note": "What better looks like. Better service: for the customer or colleague on the other end. Faster: less time per case or a quicker journey. Lower risk: fewer errors, breaches or manual handling. Evidence: proves or measures an improvement"
-        },
-        {
-          "name": "Theme",
-          "type": "Choice",
-          "choices": [
-            "Customer letters",
-            "Customer contact",
-            "Colleague time",
-            "Process",
-            "Learning",
-            "Other"
-          ]
-        },
-        {
-          "name": "BusinessArea",
-          "display": "Business area",
-          "type": "Choice",
-          "choices": [
-            "Insurance",
-            "Pensions",
-            "Investments",
-            "Shared services"
-          ]
-        },
-        {
-          "name": "Problem",
-          "display": "The problem",
-          "type": "Note"
-        },
-        {
-          "name": "IdeaStatus",
-          "display": "Status",
-          "type": "Choice",
-          "choices": [
-            "New",
-            "Shortlisted",
-            "Chosen",
-            "Parked"
-          ],
-          "format": "col-ideastatus.json"
-        }
-      ],
-      "views": [
-        {
-          "title": "Most liked",
-          "layout": "Gallery",
-          "fields": [
-            "Title",
-            "Theme",
-            "BusinessArea",
-            "IdeaStatus",
-            "LikesCount"
-          ],
-          "query": "<OrderBy><FieldRef Name='LikesCount' Ascending='FALSE'/></OrderBy>",
-          "note": "Format with tile-ideas.json. List settings, Rating settings: allow ratings, Likes. The LikesCount column appears then."
-        }
-      ],
-      "note": "Anyone in CCS-AllColleagues can add (Contribute on this list only)."
+     "name": "Outcome",
+     "type": "Choice",
+     "choices": [
+      "Better service",
+      "Faster",
+      "Lower risk",
+      "Evidence"
+     ],
+     "format": "col-outcome.json",
+     "note": "What better looks like. Better service: for the customer or colleague on the other end. Faster: less time per case or a quicker journey. Lower risk: fewer errors, breaches or manual handling. Evidence: proves or measures an improvement"
     },
     {
-      "name": "Experiments",
-      "site": "Frontier",
-      "board": "tile-experiment-board.json",
-      "gallery": "tile-handed-over.json",
-      "fields": [
-        {
-          "name": "Stage",
-          "type": "Choice",
-          "choices": [
-            "Explore",
-            "Test",
-            "Decide",
-            "Handed over",
-            "Stopped"
-          ],
-          "format": "col-experimentstage.json"
-        },
-        {
-          "name": "Outcome",
-          "type": "Choice",
-          "choices": [
-            "Better service",
-            "Faster",
-            "Lower risk",
-            "Evidence"
-          ],
-          "format": "col-outcome.json",
-          "note": "What better looks like. Better service: for whoever is on the other end. Faster: less time per case or a quicker journey. Lower risk: fewer errors, breaches or manual handling. Evidence: proves or measures an improvement"
-        },
-        {
-          "name": "Technology",
-          "type": "Text",
-          "note": "Shown as a chip, e.g. Speech to text"
-        },
-        {
-          "name": "SponsorArea",
-          "display": "Sponsor",
-          "type": "Text",
-          "note": "The business team or Lab team that owns the problem"
-        },
-        {
-          "name": "HandedTo",
-          "display": "Handed to",
-          "type": "Choice",
-          "choices": [
-            "24x7 Services",
-            "Automated Operations",
-            "Colleague Tooling",
-            "Data & Insights"
-          ]
-        },
-        {
-          "name": "Result",
-          "display": "Outcome achieved",
-          "type": "Note",
-          "note": "One sentence with the measured result, shown on the Handed over cards"
-        },
-        {
-          "name": "NowStatus",
-          "display": "Now",
-          "type": "Text"
-        },
-        {
-          "name": "ExperimentPage",
-          "display": "Experiment page",
-          "type": "URL"
-        },
-        {
-          "name": "IdeaRef",
-          "display": "From idea",
-          "type": "Lookup",
-          "lookupList": "Ideas"
-        }
-      ],
-      "views": [
-        {
-          "title": "Board",
-          "layout": "Board, grouped by Stage (bucket order Explore, Test, Decide, Handed over, Stopped)",
-          "fields": [
-            "Title",
-            "Outcome",
-            "Technology",
-            "SponsorArea",
-            "Stage"
-          ],
-          "note": "Format with tile-experiment-board.json"
-        },
-        {
-          "title": "Handed over",
-          "layout": "Gallery",
-          "fields": [
-            "Title",
-            "HandedTo",
-            "Result",
-            "NowStatus",
-            "Stage"
-          ],
-          "query": "<Where><Eq><FieldRef Name='Stage'/><Value Type='Choice'>Handed over</Value></Eq></Where>",
-          "note": "Format with tile-handed-over.json"
-        }
-      ]
+     "name": "Theme",
+     "type": "Choice",
+     "choices": [
+      "Customer letters",
+      "Customer contact",
+      "Colleague time",
+      "Process",
+      "Learning",
+      "Other"
+     ]
     },
     {
-      "name": "Radar",
-      "site": "Frontier",
-      "fields": [
-        {
-          "name": "Number",
-          "type": "Number"
-        },
-        {
-          "name": "Quadrant",
-          "type": "Choice",
-          "choices": [
-            "Agents and AI",
-            "Automation",
-            "Data and insight",
-            "Colleague experience"
-          ]
-        },
-        {
-          "name": "Ring",
-          "type": "Choice",
-          "choices": [
-            "Adopt",
-            "Trial",
-            "Assess",
-            "Hold"
-          ]
-        },
-        {
-          "name": "Why",
-          "type": "Note"
-        }
-      ],
-      "views": [],
-      "note": "Source for the technology radar (Deneb technology-radar spec). Reviewed quarterly."
+     "name": "BusinessArea",
+     "display": "Business area",
+     "type": "Choice",
+     "choices": [
+      "Insurance",
+      "Pensions",
+      "Investments",
+      "Shared services"
+     ]
+    },
+    {
+     "name": "Problem",
+     "display": "The problem",
+     "type": "Note"
+    },
+    {
+     "name": "IdeaStatus",
+     "display": "Status",
+     "type": "Choice",
+     "choices": [
+      "New",
+      "Shortlisted",
+      "Chosen",
+      "Parked"
+     ],
+     "format": "col-ideastatus.json"
     }
-  ]
+   ],
+   "views": [
+    {
+     "title": "Most liked",
+     "layout": "Gallery",
+     "fields": [
+      "Title",
+      "Theme",
+      "BusinessArea",
+      "IdeaStatus",
+      "LikesCount"
+     ],
+     "query": "<OrderBy><FieldRef Name='LikesCount' Ascending='FALSE'/></OrderBy>",
+     "note": "Format with tile-ideas.json. List settings, Rating settings: allow ratings, Likes. The LikesCount column appears then."
+    }
+   ],
+   "note": "Anyone in CCS-AllColleagues can add (Contribute on this list only)."
+  },
+  {
+   "name": "Experiments",
+   "site": "Frontier",
+   "board": "tile-experiment-board.json",
+   "gallery": "tile-handed-over.json",
+   "fields": [
+    {
+     "name": "Summary",
+     "type": "Note",
+     "note": "One sentence: the problem and what we are testing. Plain text, shown on the board card"
+    },
+    {
+     "name": "Stage",
+     "type": "Choice",
+     "choices": [
+      "Explore",
+      "Test",
+      "Decide",
+      "Handed over",
+      "Stopped"
+     ],
+     "format": "col-experimentstage.json"
+    },
+    {
+     "name": "Outcome",
+     "type": "Choice",
+     "choices": [
+      "Better service",
+      "Faster",
+      "Lower risk",
+      "Evidence"
+     ],
+     "format": "col-outcome.json",
+     "note": "What better looks like. Better service: for whoever is on the other end. Faster: less time per case or a quicker journey. Lower risk: fewer errors, breaches or manual handling. Evidence: proves or measures an improvement"
+    },
+    {
+     "name": "Technology",
+     "type": "Text",
+     "note": "Shown as a chip, e.g. Speech to text"
+    },
+    {
+     "name": "SponsorArea",
+     "display": "Sponsor",
+     "type": "Text",
+     "note": "The business team or Lab team that owns the problem"
+    },
+    {
+     "name": "HandedTo",
+     "display": "Handed to",
+     "type": "Choice",
+     "choices": [
+      "24x7 Services",
+      "Automated Operations",
+      "Colleague Tooling",
+      "Data & Insights"
+     ]
+    },
+    {
+     "name": "Result",
+     "display": "Outcome achieved",
+     "type": "Note",
+     "note": "One sentence with the measured result, shown on the Handed over cards"
+    },
+    {
+     "name": "NowStatus",
+     "display": "Now",
+     "type": "Text"
+    },
+    {
+     "name": "ExperimentPage",
+     "display": "Experiment page",
+     "type": "URL"
+    },
+    {
+     "name": "IdeaRef",
+     "display": "From idea",
+     "type": "Lookup",
+     "lookupList": "Ideas"
+    }
+   ],
+   "views": [
+    {
+     "title": "Board",
+     "layout": "Board, grouped by Stage (bucket order Explore, Test, Decide, Handed over, Stopped)",
+     "fields": [
+      "Title",
+      "Summary",
+      "Outcome",
+      "Technology",
+      "SponsorArea",
+      "Stage"
+     ],
+     "note": "Format with tile-experiment-board.json"
+    },
+    {
+     "title": "Handed over",
+     "layout": "Gallery",
+     "fields": [
+      "Title",
+      "HandedTo",
+      "Result",
+      "NowStatus",
+      "Stage"
+     ],
+     "query": "<Where><Eq><FieldRef Name='Stage'/><Value Type='Choice'>Handed over</Value></Eq></Where>",
+     "note": "Format with tile-handed-over.json"
+    }
+   ]
+  },
+  {
+   "name": "Radar",
+   "site": "Frontier",
+   "fields": [
+    {
+     "name": "Number",
+     "type": "Number"
+    },
+    {
+     "name": "Quadrant",
+     "type": "Choice",
+     "choices": [
+      "Agents and AI",
+      "Automation",
+      "Data and insight",
+      "Colleague experience"
+     ]
+    },
+    {
+     "name": "Ring",
+     "type": "Choice",
+     "choices": [
+      "Adopt",
+      "Trial",
+      "Assess",
+      "Hold"
+     ]
+    },
+    {
+     "name": "Why",
+     "type": "Note"
+    }
+   ],
+   "views": [],
+   "note": "Source for the technology radar (Deneb technology-radar spec). Reviewed quarterly."
+  }
+ ]
 }
