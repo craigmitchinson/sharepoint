@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
-  "height": 132,
-  "width": 240,
+  "height": 150,
+  "width": 270,
   "hideSelection": true,
-  "fillHorizontally": true,
+  "fillHorizontally": false,
   "formatter": {
     "elmType": "div",
     "style": {
