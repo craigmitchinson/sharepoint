@@ -17,9 +17,6 @@
       {
         "elmType": "div",
         "txtContent": "[$board_x0020_choice]",
-        "attributes": {
-          "data-role": "stage-header"
-        },
         "style": {
           "display": "=if(@rowIndex == 0, 'block', 'none')",
           "padding": "2px 4px 10px",
