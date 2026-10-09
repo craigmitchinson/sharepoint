@@ -8,12 +8,27 @@
       "display": "block",
       "width": "100%",
       "box-sizing": "border-box",
-      "padding": "=if(@rowIndex == 0, '10px 10px 4px', '4px 10px')",
+      "padding": "=if(@rowIndex == 0, '12px 10px 4px', '4px 10px')",
       "background-color": "#F3F2F1",
       "border-radius": "=if(@rowIndex == 0, '6px 6px 0 0', '0')",
       "text-align": "left"
     },
     "children": [
+      {
+        "elmType": "div",
+        "txtContent": "[$board_x0020_choice]",
+        "attributes": {
+          "data-role": "stage-header"
+        },
+        "style": {
+          "display": "=if(@rowIndex == 0, 'block', 'none')",
+          "padding": "2px 4px 10px",
+          "font-size": "14px",
+          "font-weight": "600",
+          "color": "#252423",
+          "text-align": "left"
+        }
+      },
       {
         "elmType": "div",
         "style": {
