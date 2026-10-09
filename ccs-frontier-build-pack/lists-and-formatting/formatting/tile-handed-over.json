@@ -40,9 +40,9 @@
           },
           {
             "elmType": "div",
-            "txtContent": "[$Stage]",
+            "txtContent": "[$board_x0020_choice]",
             "style": {
-              "display": "=if([$Stage] == '', 'none', 'inline-block')",
+              "display": "=if([$board_x0020_choice] == '', 'none', 'inline-block')",
               "white-space": "nowrap",
               "padding": "2px 8px",
               "border-radius": "2px",
