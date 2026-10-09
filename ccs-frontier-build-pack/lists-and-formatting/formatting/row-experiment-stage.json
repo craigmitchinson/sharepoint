@@ -45,9 +45,9 @@
         "children": [
           {
             "elmType": "div",
-            "txtContent": "=if([$HandedTo] == '', [$SponsorArea], 'Handed to ' + [$HandedTo])",
+            "txtContent": "=if([$board_x0020_choice] == 'Handed over' && [$HandedTo] != '', 'Handed to ' + [$HandedTo], [$SponsorArea])",
             "style": {
-              "display": "=if([$SponsorArea] == '' && [$HandedTo] == '', 'none', 'block')",
+              "display": "=if([$SponsorArea] == '' && [$board_x0020_choice] != 'Handed over', 'none', 'block')",
               "font-size": "11px",
               "font-weight": "700",
               "letter-spacing": ".06em",
