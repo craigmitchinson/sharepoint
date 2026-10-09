@@ -8,7 +8,7 @@
       "display": "block",
       "width": "100%",
       "box-sizing": "border-box",
-      "padding": "4px 2px",
+      "padding": "5px 2px",
       "text-align": "left"
     },
     "children": [
@@ -18,13 +18,31 @@
           "display": "block",
           "box-sizing": "border-box",
           "width": "100%",
-          "padding": "10px 12px",
+          "padding": "14px 16px 12px",
           "background-color": "#FFFFFF",
-          "border-radius": "4px",
-          "box-shadow": "0 1px 2px rgba(0,0,0,.12)",
-          "text-align": "left"
+          "border-radius": "6px",
+          "box-shadow": "0 1px 3px rgba(30,13,61,.10), 0 4px 12px rgba(30,13,61,.06)",
+          "text-align": "left",
+          "border-left-width": "4px",
+          "border-left-style": "solid",
+          "border-left-color": "=if([$board_x0020_choice] == 'Explore', '#7A4CC4', if([$board_x0020_choice] == 'Test', '#3A5BA0', if([$board_x0020_choice] == 'Decide', '#B07D10', if([$board_x0020_choice] == 'Handed over', '#4A8A3B', '#8A8886'))))"
         },
         "children": [
+          {
+            "elmType": "div",
+            "txtContent": "=if([$HandedTo] == '', [$SponsorArea], 'Handed to ' + [$HandedTo])",
+            "style": {
+              "display": "=if([$SponsorArea] == '' && [$HandedTo] == '', 'none', 'block')",
+              "font-size": "11px",
+              "font-weight": "700",
+              "letter-spacing": ".06em",
+              "text-transform": "uppercase",
+              "color": "=if([$board_x0020_choice] == 'Explore', '#7A4CC4', if([$board_x0020_choice] == 'Test', '#3A5BA0', if([$board_x0020_choice] == 'Decide', '#B07D10', if([$board_x0020_choice] == 'Handed over', '#4A8A3B', '#8A8886'))))",
+              "line-height": "1.3",
+              "text-align": "left",
+              "white-space": "normal"
+            }
+          },
           {
             "elmType": "a",
             "txtContent": "[$Title]",
@@ -35,25 +53,12 @@
             },
             "style": {
               "display": "block",
-              "font-size": "14px",
+              "margin-top": "4px",
+              "font-size": "15px",
               "font-weight": "600",
-              "color": "#252423",
+              "color": "#1E0D3D",
               "line-height": "1.3",
               "text-decoration": "none",
-              "text-align": "left",
-              "white-space": "normal"
-            }
-          },
-          {
-            "elmType": "div",
-            "txtContent": "=if([$HandedTo] == '', [$SponsorArea], 'Handed to ' + [$HandedTo])",
-            "style": {
-              "display": "=if([$SponsorArea] == '' && [$HandedTo] == '', 'none', 'block')",
-              "margin-top": "4px",
-              "font-size": "12.5px",
-              "font-weight": "600",
-              "color": "#4F2391",
-              "line-height": "1.4",
               "text-align": "left",
               "white-space": "normal"
             }
@@ -64,8 +69,8 @@
             "style": {
               "display": "=if([$Summary] == '', 'none', 'block')",
               "margin-top": "6px",
-              "font-size": "12.5px",
-              "color": "#323130",
+              "font-size": "13px",
+              "color": "#484644",
               "line-height": "1.45",
               "text-align": "left",
               "white-space": "normal"
@@ -74,62 +79,40 @@
           {
             "elmType": "div",
             "style": {
-              "display": "flex",
-              "justify-content": "space-between",
-              "align-items": "center",
-              "margin-top": "8px"
+              "display": "block",
+              "margin-top": "10px",
+              "padding-top": "10px",
+              "border-top": "1px solid #F3F2F1",
+              "text-align": "left"
             },
             "children": [
               {
-                "elmType": "div",
+                "elmType": "span",
+                "txtContent": "[$Outcome]",
                 "style": {
-                  "display": "block",
-                  "text-align": "left",
-                  "margin-right": "8px"
-                },
-                "children": [
-                  {
-                    "elmType": "span",
-                    "txtContent": "[$Outcome]",
-                    "style": {
-                      "display": "=if([$Outcome] == '', 'none', 'inline-block')",
-                      "white-space": "nowrap",
-                      "font-size": "11.5px",
-                      "font-weight": "600",
-                      "padding": "1px 8px",
-                      "border-radius": "999px",
-                      "border": "1px solid #D3C3EE",
-                      "color": "#4F2391",
-                      "background-color": "#F7F4FC",
-                      "margin-right": "6px"
-                    }
-                  },
-                  {
-                    "elmType": "span",
-                    "txtContent": "[$Technology]",
-                    "style": {
-                      "display": "=if([$Technology] == '', 'none', 'inline-block')",
-                      "font-size": "12px",
-                      "color": "#605E5C",
-                      "line-height": "1.4"
-                    }
-                  }
-                ]
+                  "display": "=if([$Outcome] == '', 'none', 'inline-block')",
+                  "white-space": "nowrap",
+                  "font-size": "11.5px",
+                  "font-weight": "600",
+                  "padding": "2px 9px",
+                  "border-radius": "999px",
+                  "background-color": "=if([$Outcome] == 'Better service', '#F1EBFA', if([$Outcome] == 'Faster', '#E5ECF8', if([$Outcome] == 'Lower risk', '#FBF1DC', if([$Outcome] == 'Evidence', '#E6F2E2', '#F3F2F1'))))",
+                  "color": "=if([$Outcome] == 'Better service', '#4F2391', if([$Outcome] == 'Faster', '#273860', if([$Outcome] == 'Lower risk', '#754F00', if([$Outcome] == 'Evidence', '#39682E', '#605E5C'))))",
+                  "margin": "0 6px 4px 0"
+                }
               },
               {
                 "elmType": "span",
-                "txtContent": "[$board_x0020_choice]",
+                "txtContent": "[$Technology]",
                 "style": {
-                  "display": "=if([$board_x0020_choice] == '', 'none', 'inline-block')",
-                  "flex": "0 0 auto",
+                  "display": "=if([$Technology] == '', 'none', 'inline-block')",
                   "white-space": "nowrap",
-                  "padding": "2px 8px",
-                  "border-radius": "2px",
-                  "font-size": "12px",
-                  "font-weight": "600",
-                  "line-height": "18px",
-                  "background-color": "=if([$board_x0020_choice] == 'Explore', '#EDE6F7', if([$board_x0020_choice] == 'Test', '#DDE3EF', if([$board_x0020_choice] == 'Decide', '#F5EAD1', if([$board_x0020_choice] == 'Handed over', '#E3F1DF', '#F3F2F1'))))",
-                  "color": "=if([$board_x0020_choice] == 'Explore', '#4F2391', if([$board_x0020_choice] == 'Test', '#273860', if([$board_x0020_choice] == 'Decide', '#754F00', if([$board_x0020_choice] == 'Handed over', '#39682E', '#605E5C'))))"
+                  "font-size": "11.5px",
+                  "padding": "2px 9px",
+                  "border-radius": "999px",
+                  "background-color": "#F3F2F1",
+                  "color": "#484644",
+                  "margin": "0 6px 4px 0"
                 }
               }
             ]
