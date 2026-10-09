@@ -24,7 +24,8 @@
         },
         "attributes": {
           "href": "[$ExperimentPage]",
-          "target": "_self"
+          "target": "_top",
+          "data-interception": "off"
         }
       },
       {
@@ -63,7 +64,7 @@
         "children": [
           {
             "elmType": "div",
-            "txtContent": "=[$Technology] + ' · ' + if([$Stage] == 'Handed over', 'to ' + [$HandedTo], [$SponsorArea])",
+            "txtContent": "=[$Technology] + ' \u00b7 ' + if([$Stage] == 'Handed over', 'to ' + [$HandedTo], [$SponsorArea])",
             "style": {
               "font-size": "12px",
               "color": "#605E5C",
